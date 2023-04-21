@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-section__content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.scroll-section__content--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-section__polar-bear {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+
+.scroll-section__polar-bear--visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: polarBearAnimation 3s infinite alternate;
+}
+
+@keyframes polarBearAnimation {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    transform: translateY(-10px) scale(1.1);
+  }
+}
+/* scene 1 
+------------------------------------------------
+*/
+/* scene 2
+------------------------------------------------
+*/
+/* scene 3
+------------------------------------------------
+*/
+/* scene 4 
+------------------------------------------------
+*//*# sourceMappingURL=style.css.map */
