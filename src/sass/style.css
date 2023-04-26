@@ -52,6 +52,14 @@ THE BEGINNING:
 •	Narrator – Give facts to viewers.
 •	Polo bear is on an iceberg, and it starts to slowly sink, while viewer is scrolling down.
 */
+.scroll-section--scene1 {
+  display: grid;
+}
+.scroll-section__quote {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* scene 2
 ------------------------------------------------
 MIDDLE
@@ -59,10 +67,25 @@ MIDDLE
 •	Soon the iceberg is melted, the polo bear sinks down under water.
 •	We can also see plastic, toxic waste, dying see life, biohazard sign.
 */
+.scroll-section--scene2 {
+  display: grid;
+}
+.scroll-section__globalwarmingfacts {
+  margin: 20px;
+  width: 400px;
+}
+.scroll-section__globalwarmingfacts2 {
+  margin: 20px;
+  width: 400px;
+}
+
 /* scene 3
 ------------------------------------------------
 END
 •	The water getting darker and fades to black screen. 
 •	Text comes up.
 •	…..
-*//*# sourceMappingURL=style.css.map */
+*/
+.scroll-section--scene1 {
+  display: grid;
+}/*# sourceMappingURL=style.css.map */

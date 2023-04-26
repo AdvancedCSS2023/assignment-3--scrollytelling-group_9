@@ -5,3 +5,14 @@ THE BEGINNING:
 •	Narrator – Give facts to viewers.
 •	Polo bear is on an iceberg, and it starts to slowly sink, while viewer is scrolling down.
 */
+
+.scroll-section {
+&--scene1 {
+    display: grid;
+}
+
+&__quote {
+    margin-left: auto;
+    margin-right: auto;
+}
+}
