@@ -1,34 +1,30 @@
 @charset "UTF-8";
 body {
   transition: 0.5s background-color;
-  background-color: aqua;
 }
 
 .change-1 {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  height: 3000px;
 }
 
 .change-2 {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  margin-top: 1440px;
+  height: 2000px;
+  margin-top: 3000px;
 }
 
 .change-3 {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  margin-top: 2880px;
+  height: 2000px;
+  margin-top: 5000px;
 }
 
 .change-4 {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  margin-top: 4320px;
+  width: 1000px;
+  height: 2000px;
+  margin-top: 7000px;
 }
 
 <<<<<<< Updated upstream
