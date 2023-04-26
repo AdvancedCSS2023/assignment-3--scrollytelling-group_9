@@ -1,36 +1,37 @@
 @charset "UTF-8";
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  transition: 0.5s background-color;
+  background-color: aqua;
 }
 
-.scroll-section {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
+.change-1 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
 }
 
-.scroll-section__content {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+.change-2 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: 1440px;
 }
 
-.scroll-section__content--visible {
-  opacity: 1;
-  transform: translateY(0);
+.change-3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: 2880px;
 }
 
-.scroll-section__polar-bear {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+.change-4 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: 4320px;
 }
 
+<<<<<<< Updated upstream
 .scroll-section__polar-bear--visible {
   opacity: 1;
   transform: translateY(0);
@@ -61,6 +62,9 @@ THE BEGINNING:
 }
 
 /* scene 2
+=======
+/* scene 1 ------------------------------------------------*/ /* scene 2
+>>>>>>> Stashed changes
 ------------------------------------------------
 MIDDLE
 •	Facts come up while It's sinking.
