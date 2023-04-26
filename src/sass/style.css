@@ -56,8 +56,8 @@ THE BEGINNING:
   display: grid;
 }
 .scroll-section__quote {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px;
+  width: 400px;
 }
 
 /* scene 2
