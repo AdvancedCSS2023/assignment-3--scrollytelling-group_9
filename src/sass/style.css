@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  transition: 0.5s background-color;
+  transition: 2s background-color;
 }
 
 .change-1 {
@@ -10,22 +10,21 @@ body {
 
 .change-2 {
   position: absolute;
-  height: 2000px;
+  height: 3000px;
   margin-top: 3000px;
 }
 
 .change-3 {
   position: absolute;
   height: 2000px;
-  margin-top: 5000px;
+  margin-top: 6000px;
 }
-
 .change-4 {
   position: absolute;
   width: 1000px;
   height: 2000px;
   margin-top: 7000px;
-}
+} 
 
 <<<<<<< Updated upstream
 .scroll-section__polar-bear--visible {

@@ -5,16 +5,21 @@ MIDDLE
 •	Soon the iceberg is melted, the polo bear sinks down under water.
 •	We can also see plastic, toxic waste, dying see life, biohazard sign.
 */
+
 .scroll-section {
+
     &--scene2 {
-        display: grid;
+    display: grid;
+    margin-top:1440px;
     }
+    
     &__globalwarmingfacts {
-        margin: 20px;
-        width: 400px;
+    margin: 20px;
+    width: 400px;
     }
+    
     &__globalwarmingfacts2 {
-        margin: 20px;
-        width: 400px;
+    margin: 20px;
+    width: 400px;
     }
 }
