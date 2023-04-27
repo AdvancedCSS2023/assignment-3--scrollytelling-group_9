@@ -23,3 +23,17 @@ MIDDLE
     width: 400px;
     }
 }
+
+.small__fish{
+    animation: fish-animation 10s infinite;
+}
+
+@keyframes fish-animation{
+    from {
+        transform: translateX(1300px);
+    }
+    to {
+        transform: translateX(-2000px);
+    }
+}
+
