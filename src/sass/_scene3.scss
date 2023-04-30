@@ -5,7 +5,62 @@ END
 •	Text comes up.
 •	…..
 */
+.scroll-section {
 
-.scroll-section--scene1 {
+/*The whole scene*/
+&--scene3 {
     display: grid;
+}
+/*infotext*/
+&__howtofix {
+    font-size: 25px;
+    z-index: 1;
+    width: 500px;
+    color: red;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+/*deadfish 1*/
+&__img1 {
+    width: 250px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(1000px, 620px);
+}
+/*deadfish 2*/
+&__img2 {
+    width: 500px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(100px, 600px);
+}
+/*seaweed 1*/
+&__img3 {
+    width: 400px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(1700px, 200px);
+    
+}
+/*seaweed 2*/
+&__img4 {
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(42px, 100px);
+}
+/*oceanfloor*/
+&__img5 {
+    width: 100vw;
+    position: absolute;
+    transform: translate(-30px, 600px);
+}
+/*extra dead fish*/
+&__img6 {
+    width: 400px;
+    margin-bottom: 0;
+    position: absolute;
+    transform: rotate(180deg) translate(-1000px, -700px);
+}
 }
