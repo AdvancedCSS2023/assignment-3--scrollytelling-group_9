@@ -5,11 +5,9 @@ END
 •	Text comes up.
 •	…..
 */
-
+.scroll-section {
 .scroll-section--scene1 {
     display: grid;
-<<<<<<< Updated upstream
-=======
 }
 /*infotext*/
 &__howtofix {
@@ -63,5 +61,4 @@ END
     position: absolute;
     transform: rotate(180deg) translate(-1000px, -700px);
 }
->>>>>>> Stashed changes
 }

@@ -31,21 +31,6 @@ body {
   margin-top: 4320px;
 }
 
-<<<<<<< Updated upstream
-.scroll-section__polar-bear--visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: polarBearAnimation 3s infinite alternate;
-}
-
-@keyframes polarBearAnimation {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    transform: translateY(-10px) scale(1.1);
-  }
-}
 /* scene 1 
 ------------------------------------------------
 THE BEGINNING:
@@ -61,10 +46,8 @@ THE BEGINNING:
   width: 400px;
 }
 
+/* scene 1 ------------------------------------------------*/
 /* scene 2
-=======
-/* scene 1 ------------------------------------------------*/ /* scene 2
->>>>>>> Stashed changes
 ------------------------------------------------
 MIDDLE
 •	Facts come up while It's sinking.
@@ -90,12 +73,7 @@ END
 •	Text comes up.
 •	…..
 */
-<<<<<<< Updated upstream
-.scroll-section--scene1 {
-  display: grid;
-=======
 .scroll-section {
-  /*The whole scene*/
   /*infotext*/
   /*deadfish 1*/
   /*deadfish 2*/
@@ -104,7 +82,7 @@ END
   /*oceanfloor*/
   /*extra dead fish*/
 }
-.scroll-section--scene3 {
+.scroll-section .scroll-section--scene1 {
   display: grid;
 }
 .scroll-section__howtofix {
@@ -150,5 +128,4 @@ END
   margin-bottom: 0;
   position: absolute;
   transform: rotate(180deg) translate(-1000px, -700px);
->>>>>>> Stashed changes
 }/*# sourceMappingURL=style.css.map */
