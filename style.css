@@ -1,12 +1,45 @@
+.iceberg, .icebear{
+    display: grid;
+    justify-items: center;
+}
 
-:root {
-  --sky-color: #dcf6fc;
-  --cloud-color: #8ae0f3;
-  --ground-color: #e2ede2;
-  --green-house: #7cbb7c;
-  --shadow-house: #8b1818;
-  --pink-house: #f8aa9f;
-  --dark: #1d1d1b;
-  --dark-roof: #0a490a;
-  --dark-vegetation: #0a490a;
+.ice-platform{
+    position: absolute;
+   
+}
+
+.ice-overlay{
+    z-index: -1;
+    position: absolute;
+    animation: iceberg-animation 1s alternate infinite linear;
+}
+
+.ice-bottom{
+    z-index: -2;
+    position: absolute;
+    animation: iceberg-animation 3s alternate infinite linear;
+}
+
+.icebear{
+    margin-top: -150px;
+}
+
+.icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face{
+    position: absolute;
+}
+
+.head-move{
+    position: absolute;
+    margin-left: -850px;
+    animation: iceberg-animation 3s alternate infinite linear;
+}
+
+@keyframes iceberg-animation {
+    0% {
+        transform: rotate(2deg);
+      }
+    
+    100%{
+      transform: rotate(-2deg);
+    }
 }
