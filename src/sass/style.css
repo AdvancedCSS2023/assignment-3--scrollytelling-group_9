@@ -1,4 +1,8 @@
 @charset "UTF-8";
+body {
+  transition: 0.5s background-color;
+}
+
 .change-1 {
   position: absolute;
   width: 1000px;
