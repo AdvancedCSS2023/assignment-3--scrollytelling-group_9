@@ -5,7 +5,7 @@ END
 •	Text comes up.
 •	…..
 */
-.scroll-section .scroll-section {
+.scroll-section {
 
     /*The whole scene*/
     &--scene3 {
@@ -61,6 +61,6 @@ END
         width: 400px;
         margin-bottom: 0;
         position: absolute;
-        transform: rotate(180deg) translate(-1000px, -700px);
+        transform: rotate(180deg) translate(-1000px, 200px);
     }
     }
