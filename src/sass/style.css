@@ -73,59 +73,6 @@ END
 •	Text comes up.
 •	…..
 */
-.scroll-section {
-  /*infotext*/
-  /*deadfish 1*/
-  /*deadfish 2*/
-  /*seaweed 1*/
-  /*seaweed 2*/
-  /*oceanfloor*/
-  /*extra dead fish*/
-}
-.scroll-section .scroll-section--scene1 {
+.scroll-section--scene1 {
   display: grid;
-}
-.scroll-section__howtofix {
-  font-size: 25px;
-  z-index: 1;
-  width: 500px;
-  color: red;
-  position: absolute;
-  top: 25%;
-  left: 25%;
-}
-.scroll-section__img1 {
-  width: 250px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(1000px, 620px);
-}
-.scroll-section__img2 {
-  width: 500px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(100px, 600px);
-}
-.scroll-section__img3 {
-  width: 400px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(1300px, 200px);
-}
-.scroll-section__img4 {
-  width: 200px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(42px, 100px);
-}
-.scroll-section__img5 {
-  width: 100vw;
-  position: absolute;
-  transform: translate(-30px, 600px);
-}
-.scroll-section__img6 {
-  width: 400px;
-  margin-bottom: 0;
-  position: absolute;
-  transform: rotate(180deg) translate(-1000px, -700px);
 }/*# sourceMappingURL=style.css.map */

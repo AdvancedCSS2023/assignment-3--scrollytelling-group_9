@@ -5,8 +5,10 @@ END
 •	Text comes up.
 •	…..
 */
-.scroll-section {
-.scroll-section--scene1 {
+.scroll-section {.scroll-section {
+
+/*The whole scene*/
+&--scene3 {
     display: grid;
 }
 /*infotext*/
@@ -38,7 +40,7 @@ END
     width: 400px;
     position: absolute;
     z-index: 1;
-    transform: translate(1300px, 200px);
+    transform: translate(1700px, 200px);
     
 }
 /*seaweed 2*/
