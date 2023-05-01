@@ -41,6 +41,7 @@ THE BEGINNING:
   width: 400px;
 }
 
+/* scene 1 ------------------------------------------------*/
 /* scene 2
 ------------------------------------------------
 MIDDLE
@@ -118,7 +119,7 @@ END
   width: 400px;
   position: absolute;
   z-index: 1;
-  transform: translate(1700px, 200px);
+  transform: translate(1400px, 200px);
 }
 .scroll-section .scroll-section__img4 {
   width: 200px;
