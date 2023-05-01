@@ -120,7 +120,7 @@ MIDDLE
 .scroll-section__globalwarmingfacts2 {
   margin: 20px;
   width: 400px;
-}
+} 
 
 .small__fish {
   animation: fish-animation 10s infinite;
@@ -142,14 +142,7 @@ END
 •	…..
 */
 .scroll-section {
-  /*The whole scene*/
-  /*infotext*/
-  /*deadfish 1*/
-  /*deadfish 2*/
-  /*seaweed 1*/
-  /*seaweed 2*/
-  /*oceanfloor*/
-  /*extra dead fish*/
+
 }
 .scroll-section--scene3 {
   display: grid;
