@@ -1,46 +1,31 @@
 @charset "UTF-8";
-body {
-  transition: 2s background-color;
-}
-
 .change-1 {
   position: absolute;
-  height: 3000px;
+  width: 100px;
+  height: 1600px;
 }
 
 .change-2 {
   position: absolute;
-  height: 3000px;
-  margin-top: 3000px;
+  width: 1000px;
+  height: 1500px;
+  margin-top: 3540px;
 }
 
 .change-3 {
   position: absolute;
-  height: 2000px;
-  margin-top: 6000px;
+  width: 1000px;
+  height: 1500px;
+  margin-top: 4080px;
 }
+
 .change-4 {
   position: absolute;
   width: 1000px;
   height: 2000px;
-  margin-top: 7000px;
-} 
-
-<<<<<<< Updated upstream
-.scroll-section__polar-bear--visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: polarBearAnimation 3s infinite alternate;
+  margin-top: 6000px;
 }
 
-@keyframes polarBearAnimation {
-  0% {
-    transform: translateY(0) scale(1);
-  }
-  100% {
-    transform: translateY(-10px) scale(1.1);
-  }
-}
 /* scene 1 
 ------------------------------------------------
 THE BEGINNING:
@@ -57,9 +42,6 @@ THE BEGINNING:
 }
 
 /* scene 2
-=======
-/* scene 1 ------------------------------------------------*/ /* scene 2
->>>>>>> Stashed changes
 ------------------------------------------------
 MIDDLE
 •	Facts come up while It's sinking.
@@ -68,6 +50,7 @@ MIDDLE
 */
 .scroll-section--scene2 {
   display: grid;
+  margin-top: 1440px;
 }
 .scroll-section__globalwarmingfacts {
   margin: 20px;
@@ -78,8 +61,18 @@ MIDDLE
   width: 400px;
 }
 
+.small__fish {
+  animation: fish-animation 10s infinite;
+}
 
-
+@keyframes fish-animation {
+  from {
+    transform: translateX(1300px);
+  }
+  to {
+    transform: translateX(-2000px);
+  }
+}
 /* scene 3
 ------------------------------------------------
 END
