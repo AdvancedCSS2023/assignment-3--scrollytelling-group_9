@@ -42,6 +42,49 @@ THE BEGINNING:
 }
 
 /* scene 1 ------------------------------------------------*/
+.iceberg, .icebear {
+  display: grid;
+  justify-items: center;
+}
+
+.ice-platform {
+  position: absolute;
+}
+
+.ice-overlay {
+  z-index: -1;
+  position: absolute;
+  animation: iceberg-animation 1s alternate infinite linear;
+}
+
+.ice-bottom {
+  z-index: -2;
+  position: absolute;
+  animation: iceberg-animation 3s alternate infinite linear;
+}
+
+.icebear {
+  margin-top: -150px;
+}
+
+.icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
+  position: absolute;
+}
+
+.head-move {
+  position: absolute;
+  margin-left: -850px;
+  animation: iceberg-animation 3s alternate infinite linear;
+}
+
+@keyframes iceberg-animation {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
 /* scene 2
 ------------------------------------------------
 MIDDLE
@@ -74,6 +117,10 @@ MIDDLE
     transform: translateX(-2000px);
   }
 }
+
+
+
+
 /* scene 3
 ------------------------------------------------
 END
