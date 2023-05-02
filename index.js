@@ -8,7 +8,7 @@ const callback = (entries, observer) => {
   
   const changes = document.querySelectorAll('.change');
   
-  const observer = new IntersectionObserver(callback, { threshold: .5 });
+  const observer = new IntersectionObserver(callback, { threshold: .1 });
   
   changes.forEach(change => {
     observer.observe(change);

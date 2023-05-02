@@ -45,11 +45,14 @@ THE BEGINNING:
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face{
     position: absolute;
+    width: 900px;
+    height: 900px;
 }
 
 .head-move{
     position: absolute;
-    margin-left: -850px;
+    width: 900px;
+    height: 900px;
     animation: iceberg-animation 3s alternate infinite linear;
 }
 
