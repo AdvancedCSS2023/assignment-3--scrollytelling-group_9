@@ -1,29 +1,46 @@
 @charset "UTF-8";
+body {
+  transition: 3s background-color;
+}
+
+.scene1 {
+  margin-top: 1080px;
+}
+
+.scene2 {
+  margin-top: 1080px;
+}
+
 .change-1 {
   position: absolute;
-  width: 100px;
-  height: 1600px;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
 }
 
 .change-2 {
   position: absolute;
-  width: 1000px;
-  height: 1500px;
-  margin-top: 3540px;
+  width: 100%;
+  height: 100vh;
+  margin-top: 1080px;
 }
 
 .change-3 {
   position: absolute;
-  width: 1000px;
-  height: 1500px;
-  margin-top: 4080px;
+  width: 100%;
+  height: 100vh;
+  margin-top: 2160px;
 }
 
 .change-4 {
   position: absolute;
-  width: 1000px;
-  height: 2000px;
-  margin-top: 6000px;
+  width: 100%;
+  height: 100vh;
+  margin-top: 3240px;
+}
+
+* {
+  overflow-x: hidden;
 }
 
 /* scene 1 
@@ -103,7 +120,7 @@ MIDDLE
 .scroll-section__globalwarmingfacts2 {
   margin: 20px;
   width: 400px;
-}
+} 
 
 .small__fish {
   animation: fish-animation 10s infinite;
@@ -124,20 +141,13 @@ END
 •	Text comes up.
 •	…..
 */
-.scroll-section .scroll-section {
-  /*The whole scene*/
-  /*infotext*/
-  /*deadfish 1*/
-  /*deadfish 2*/
-  /*seaweed 1*/
-  /*seaweed 2*/
-  /*oceanfloor*/
-  /*extra dead fish*/
+.scroll-section {
+
 }
-.scroll-section .scroll-section--scene3 {
+.scroll-section--scene3 {
   display: grid;
 }
-.scroll-section .scroll-section__howtofix {
+.scroll-section__howtofix {
   font-size: 25px;
   z-index: 1;
   width: 500px;
@@ -146,36 +156,36 @@ END
   top: 25%;
   left: 25%;
 }
-.scroll-section .scroll-section__img1 {
+.scroll-section__img1 {
   width: 250px;
   position: absolute;
   z-index: 1;
   transform: translate(1000px, 620px);
 }
-.scroll-section .scroll-section__img2 {
+.scroll-section__img2 {
   width: 500px;
   position: absolute;
   z-index: 1;
   transform: translate(100px, 600px);
 }
-.scroll-section .scroll-section__img3 {
+.scroll-section__img3 {
   width: 400px;
   position: absolute;
   z-index: 1;
   transform: translate(1400px, 200px);
 }
-.scroll-section .scroll-section__img4 {
+.scroll-section__img4 {
   width: 200px;
   position: absolute;
   z-index: 1;
   transform: translate(42px, 100px);
 }
-.scroll-section .scroll-section__img5 {
+.scroll-section__img5 {
   width: 100vw;
   position: absolute;
   transform: translate(-30px, 600px);
 }
-.scroll-section .scroll-section__img6 {
+.scroll-section__img6 {
   width: 400px;
   margin-bottom: 0;
   position: absolute;
