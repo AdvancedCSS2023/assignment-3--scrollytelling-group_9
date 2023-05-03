@@ -15,7 +15,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100vh;
-  z-index: 9999;
 }
 
 .change-2 {
@@ -86,11 +85,14 @@ THE BEGINNING:
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
   position: absolute;
+  width: 900px;
+  height: 900px;
 }
 
 .head-move {
   position: absolute;
-  margin-left: -850px;
+  width: 900px;
+  height: 900px;
   animation: iceberg-animation 3s alternate infinite linear;
 }
 
@@ -120,7 +122,7 @@ MIDDLE
 .scroll-section__globalwarmingfacts2 {
   margin: 20px;
   width: 400px;
-} 
+}
 
 .small__fish {
   animation: fish-animation 10s infinite;
@@ -142,7 +144,14 @@ END
 •	…..
 */
 .scroll-section {
-
+  /*The whole scene*/
+  /*infotext*/
+  /*deadfish 1*/
+  /*deadfish 2*/
+  /*seaweed 1*/
+  /*seaweed 2*/
+  /*oceanfloor*/
+  /*extra dead fish*/
 }
 .scroll-section--scene3 {
   display: grid;
