@@ -53,7 +53,7 @@ THE BEGINNING:
     position: absolute;
     width: 900px;
     height: 900px;
-    animation: iceberg-animation 3s alternate infinite linear;
+    animation: head-animation 1s alternate infinite linear;
 }
 
 @keyframes iceberg-animation {
@@ -63,5 +63,15 @@ THE BEGINNING:
     
     100%{
         transform: rotate(-2deg);
+    }
+}
+
+@keyframes head-animation {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    100%{
+        transform: rotate(-10deg);
     }
 }
