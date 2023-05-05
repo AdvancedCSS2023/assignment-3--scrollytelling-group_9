@@ -6,27 +6,27 @@ body {
 .change-1 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .change-2 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 1080px;
 }
 
 .change-3 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 2160px;
 }
 
 .change-4 {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 3240px;
 }
 
@@ -125,78 +125,51 @@ MIDDLE
 }
 
 .small__fish {
-  animation: fish-animation 10s infinite;
+  animation: fish-animation-1 10s infinite;
 }
 
-@keyframes fish-animation {
+@keyframes fish-animation-1 {
   from {
     transform: translateX(1300px);
   }
   to {
-    transform: translateX(-2000px);
+    transform: translateX(-1700px);
   }
 }
-/* scene 3
-------------------------------------------------
-END
-•	The water getting darker and fades to black screen. 
-•	Text comes up.
-•	…..
-*/
-.scroll-section {
-  /*The whole scene*/
-  /*infotext*/
-  /*deadfish 1*/
-  /*deadfish 2*/
-  /*seaweed 1*/
-  /*seaweed 2*/
-  /*oceanfloor*/
-  /*extra dead fish*/
+.big__fish, .small__amount__fish {
+  animation: fish-animation-2 14s infinite;
 }
-.scroll-section--scene3 {
-  display: grid;
+
+@keyframes fish-animation-2 {
+  from {
+    transform: translateX(-1300px);
+  }
+  to {
+    transform: translateX(1700px);
+  }
 }
-.scroll-section__howtofix {
-  font-size: 25px;
-  z-index: 1;
-  width: 500px;
-  color: red;
-  position: absolute;
-  top: 25%;
-  left: 25%;
+.trash {
+  animation: trash-animation 7s ease-in infinite;
 }
-.scroll-section__img1 {
-  width: 250px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(1000px, 620px);
+
+@keyframes trash-animation {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(100px);
+  }
+  70% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
-.scroll-section__img2 {
-  width: 500px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(100px, 600px);
-}
-.scroll-section__img3 {
-  width: 400px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(1400px, 200px);
-}
-.scroll-section__img4 {
-  width: 200px;
-  position: absolute;
-  z-index: 1;
-  transform: translate(42px, 100px);
-}
-.scroll-section__img5 {
-  width: 100vw;
-  position: absolute;
-  transform: translate(-30px, 600px);
-}
-.scroll-section__img6 {
-  width: 400px;
-  margin-bottom: 0;
-  position: absolute;
-  transform: rotate(180deg) translate(-1000px, -700px);
+.trash__sock {
+  margin-left: 100px;
+  height: 20px;
 }/*# sourceMappingURL=style.css.map */
