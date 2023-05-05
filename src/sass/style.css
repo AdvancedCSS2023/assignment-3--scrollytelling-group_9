@@ -3,10 +3,6 @@ body {
   transition: 3s background-color;
 }
 
-.scene2 {
-  margin-top: 1080px;
-}
-
 .change-1 {
   position: absolute;
   width: 100%;
@@ -54,6 +50,9 @@ THE BEGINNING:
 }
 
 /* scene 1 ------------------------------------------------*/
+/*.clouds{
+    position: absolute;
+}*/
 .iceberg, .icebear {
   display: grid;
   justify-items: center;
@@ -75,21 +74,15 @@ THE BEGINNING:
   animation: iceberg-animation 3s alternate infinite linear;
 }
 
-.icebear {
-  margin-top: -150px;
-}
-
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
   position: absolute;
-  width: 900px;
-  height: 900px;
 }
 
 .head-move {
   position: absolute;
   width: 900px;
   height: 900px;
-  animation: head-animation 1s alternate infinite linear;
+  animation: head-animation 3s alternate infinite linear;
 }
 
 @keyframes iceberg-animation {
@@ -102,10 +95,13 @@ THE BEGINNING:
 }
 @keyframes head-animation {
   0% {
-    transform: rotate(10deg);
+    transform: rotate(8deg);
+  }
+  50% {
+    transform: rotate(-2deg);
   }
   100% {
-    transform: rotate(-10deg);
+    transform: rotate(-8deg);
   }
 }
 /* scene 2
