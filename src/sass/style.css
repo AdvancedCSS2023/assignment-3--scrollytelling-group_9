@@ -124,12 +124,8 @@ MIDDLE
   width: 400px;
 }
 
-.small__fish {
+.small__fish, .cluster__fish {
   animation: fish-animation-1 10s infinite;
-}
-
-.cluster__fish {
-  overflow: hidden;
 }
 
 @keyframes fish-animation-1 {
@@ -176,4 +172,59 @@ MIDDLE
 .trash__sock {
   margin-left: 100px;
   height: 20px;
+}
+
+.scene2 {
+  overflow: hidden;
+}
+
+.scroll-section .scroll-section {
+  /*The whole scene*/
+}
+.scroll-section .scroll-section--scene3 {
+  display: grid;
+}
+.scroll-section .scroll-section__howtofix {
+  font-size: 25px;
+  z-index: 1;
+  width: 500px;
+  color: red;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+.scroll-section .scroll-section__img1 {
+  width: 250px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(1000px, 620px);
+}
+.scroll-section .scroll-section__img2 {
+  width: 500px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(100px, 600px);
+}
+.scroll-section .scroll-section__img3 {
+  width: 400px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(1400px, 200px);
+}
+.scroll-section .scroll-section__img4 {
+  width: 200px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(42px, 100px);
+}
+.scroll-section .scroll-section__img5 {
+  width: 100vw;
+  position: absolute;
+  transform: translate(-30px, 600px);
+}
+.scroll-section .scroll-section__img6 {
+  width: 400px;
+  margin-bottom: 0;
+  position: absolute;
+  transform: rotate(180deg) translate(-1000px, -700px);
 }/*# sourceMappingURL=style.css.map */
