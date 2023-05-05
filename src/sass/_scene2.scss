@@ -28,6 +28,9 @@ MIDDLE
     animation: fish-animation-1 10s infinite;
 }
 
+.cluster__fish{
+    overflow: hidden;
+}
 
 @keyframes fish-animation-1{
     from {
