@@ -7,10 +7,9 @@ MIDDLE
 */
 
 .scroll-section {
-
     &--scene2 {
     display: grid;
-    margin-top:1440px;
+    margin-top: 1440px;
     }
     
     &__globalwarmingfacts {
@@ -24,7 +23,7 @@ MIDDLE
     }
 }
 
-.small__fish{
+.small__fish, .cluster__fish{
     animation: fish-animation-1 10s infinite;
 }
 
@@ -51,11 +50,8 @@ MIDDLE
     }
 }
 
-
-
 .trash{
     animation: trash-animation 7s ease-in infinite;
-
 }
 
 @keyframes trash-animation {

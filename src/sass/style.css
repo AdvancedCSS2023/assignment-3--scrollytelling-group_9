@@ -128,7 +128,7 @@ MIDDLE
   width: 400px;
 }
 
-.small__fish {
+.small__fish, .cluster__fish {
   animation: fish-animation-1 10s infinite;
 }
 
@@ -184,13 +184,6 @@ MIDDLE
 
 .scroll-section .scroll-section {
   /*The whole scene*/
-  /*infotext*/
-  /*deadfish 1*/
-  /*deadfish 2*/
-  /*seaweed 1*/
-  /*seaweed 2*/
-  /*oceanfloor*/
-  /*extra dead fish*/
 }
 .scroll-section .scroll-section--scene3 {
   display: grid;
@@ -208,7 +201,7 @@ MIDDLE
   width: 250px;
   position: absolute;
   z-index: 1;
-  transform: translate(10px, 62px);
+  transform: translate(1000px, 620px);
 }
 .scroll-section .scroll-section__img2 {
   width: 500px;
