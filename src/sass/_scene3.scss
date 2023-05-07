@@ -66,4 +66,16 @@
       height: auto;
       transform: rotate(180deg);
     }
+
+    &__bottom {
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        animation: fadeIn 5s;
+    }
+    .fade-in {
+        opacity: 1;
+        transition: opacity 5s;
+      }
+      
   }

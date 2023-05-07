@@ -47,6 +47,20 @@ body {
   overflow-x: hidden;
 }
 
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.scroll-section__howtofix {
+  padding-top: 50vh;
+}
+
 /* scene 1 
 ------------------------------------------------
 THE BEGINNING:
@@ -249,4 +263,14 @@ MIDDLE
   height: 10vh;
   height: auto;
   transform: rotate(180deg);
+}
+.scroll-section__bottom {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  animation: fadeIn 5s;
+}
+.scroll-section .fade-in {
+  opacity: 1;
+  transition: opacity 5s;
 }/*# sourceMappingURL=style.css.map */

@@ -44,3 +44,15 @@ body {
 * {
     overflow-x: hidden;
 }
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s;
+  }
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+.scroll-section__howtofix {
+    padding-top: 50vh;
+}
