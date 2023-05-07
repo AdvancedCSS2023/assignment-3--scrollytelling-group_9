@@ -1,5 +1,17 @@
+:root {
+    --text-color: black;
+    --background-color: white;
+  }
+  
+  [data-theme="dark"] {
+    --text-color: white;
+    --background-color: black;
+  }
+  
 body {
   transition: 3s background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .change-1 {
