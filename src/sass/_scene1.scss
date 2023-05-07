@@ -9,74 +9,71 @@ THE BEGINNING:
 .scroll-section {
 
     &--scene1 {
-        display: grid;
     }
 
     &__quote {
-        margin: 20px;
-        width: 400px;
+        margin: 20vw;
+        width: 40vw;
     }
 }
 /* scene 1 ------------------------------------------------*/
 /*.clouds{
     position: absolute;
 }*/
-.iceberg, .icebear{
-    display: grid;
-    justify-items: center;
-}
+.scene1 {
 
-.ice-platform{
+}
+.iceberg {
+margin-left: 20%;
+  }
+
+  .ice-platform {
     position: absolute;
-}
-
-.ice-overlay{
+  }
+  
+  .ice-overlay {
     z-index: -1;
     position: absolute;
     animation: iceberg-animation 1s alternate infinite linear;
-}
-
-.ice-bottom{
+  }
+  
+  .ice-bottom {
     z-index: -2;
     position: absolute;
     animation: iceberg-animation 3s alternate infinite linear;
-}
-
-.icebear{
-    margin-top: -150px;
-}
-
-.icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face{
+  }
+  
+  .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
     position: absolute;
-}
-
-.head-move{
+  }
+  
+  .head-move {
     position: absolute;
-    width: 900px;
-    height: 900px;
+    width: 100vw;
+    height: 100vw;
     animation: head-animation 3s alternate infinite linear;
-}
+  }
 
-@keyframes iceberg-animation {
+  .icebear__body {
+  }
+  
+  @keyframes iceberg-animation {
     0% {
-        transform: rotate(2deg);
+      transform: rotate(2deg);
     }
-    
-    100%{
-        transform: rotate(-2deg);
+    100% {
+      transform: rotate(-2deg);
     }
-}
-
-@keyframes head-animation {
+  }
+  @keyframes head-animation {
     0% {
-        transform: rotate(8deg);
+      transform: rotate(1deg);
     }
-
-    50%{
-        transform: rotate(-2deg);
+    50% {
+      transform: rotate(-1deg);
     }
-
-    100%{
-        transform: rotate(-8deg);
+    100% {
+      transform: rotate(-1deg);
     }
-}
+  }
+  

@@ -1,66 +1,69 @@
-// /* scene 3
-// ------------------------------------------------
-// END
-// •	The water getting darker and fades to black screen. 
-// •	Text comes up.
-// •	…..
-// */
-.scroll-section .scroll-section {
-
+.scroll-section {
     /*The whole scene*/
+  
     &--scene3 {
-        display: grid;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
     }
-    // infotext
+  
     &__howtofix {
-        font-size: 25px;
-        z-index: 1;
-        width: 500px;
-        color: red;
-        position: absolute;
-        top: 25%;
-        left: 25%;
+      font-size: 2.5vh;
+      z-index: 1;
+      width: 30vw;
+      color: red;
+      position: absolute;
     }
-    // deadfish 1
+  
     &__img1 {
-        width: 250px;
-        position: absolute;
-        z-index: 1;
-        transform: translate(1000px, 620px);
+      position: absolute;
+      z-index: 1;
+      width: 10vw;
+      height: 10vh;
+      bottom: 0;
+      left: 10vw;
     }
-    // deadfish 2
+  
     &__img2 {
-        width: 500px;
-        position: absolute;
-        z-index: 1;
-        transform: translate(100px, 600px);
+      position: absolute;
+      z-index: 1;
+      width: 10vw;
+      height: 10vh;
+      bottom: 15vh;
+      left: 45vw;
     }
-    // seaweed 1
+  
     &__img3 {
-        width: 400px;
-        position: absolute;
-        z-index: 1;
-        transform: translate(1400px, 200px);
-        
+      position: absolute;
+      z-index: 1;
+      width: 30vw;
+      height: 30vh;
+      bottom: 20vh;
+      left: 5vw;
     }
-    // seaweed 2
+  
     &__img4 {
-        width: 200px;
-        position: absolute;
-        z-index: 1;
-        transform: translate(42px, 100px);
+      position: absolute;
+      z-index: 1;
+      width: 50vw;
+      height: 50vh;
+      bottom: 20vh;
+      left: 50vw;
     }
-    // oceanfloor
+  
     &__img5 {
-        width: 100vw;
-        position: absolute;
-        transform: translate(-30px, 600px);
+      position: absolute;
+      bottom: 0;
+      left: 0;
     }
-    // extra dead fish
+  
     &__img6 {
-        width: 400px;
-        margin-bottom: 0;
-        position: absolute;
-        transform: rotate(180deg) translate(-1000px, -700px);
+      position: absolute;
+      bottom: 0;
+      left: 80vw;
+      width: 10vw;
+      height: 10vh;
+      height: auto;
+      transform: rotate(180deg);
     }
-}
+  }

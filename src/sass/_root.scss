@@ -1,40 +1,44 @@
-
 body {
-    transition: 3s background-color;
+  transition: 3s background-color;
 }
 
-.scene1 {
-
-}
-
-.scene2 {
-    
-}
 .change-1 {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .change-2 {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    margin-top: 1080px;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 100vh;
 }
 
 .change-3 {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    margin-top: 2160px;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 200vh;
 }
 
 .change-4 {
-    position: absolute;
-    width: 100%;
-    min-height: 100vh;
-    margin-top: 3240px;
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 300vh;
+}
+
+* {
+  overflow-x: hidden;
+}
+
+.scroll-section--scene1 {
+  display: grid;
+}
+.scroll-section__quote {
+  margin: 2vh;
+  width: 40vw;
 }
 
 * {
