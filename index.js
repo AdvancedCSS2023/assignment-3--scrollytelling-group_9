@@ -55,3 +55,4 @@ document.addEventListener("DOMContentLoaded", function() {
   const fadeInObserver = new IntersectionObserver(fadeInCallback, { threshold: 0.1 });
   fadeInObserver.observe(bottomText);
 });
+

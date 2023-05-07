@@ -61,6 +61,15 @@ body {
   padding-top: 50vh;
 }
 
+/*
+@media (prefers-reduced-motion: reduce) {
+  Disable all animations
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+*/
 /* scene 1 
 ------------------------------------------------
 THE BEGINNING:

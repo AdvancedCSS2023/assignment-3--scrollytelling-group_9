@@ -56,3 +56,12 @@ body {
 .scroll-section__howtofix {
     padding-top: 50vh;
 }
+/*
+@media (prefers-reduced-motion: reduce) {
+  Disable all animations
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+*/
