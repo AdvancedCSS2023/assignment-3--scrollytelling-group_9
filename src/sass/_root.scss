@@ -7,14 +7,14 @@
     --text-color: white;
     --background-color: black;
   }
-  
+
 body {
   transition: 3s background-color;
   color: var(--text-color);
   background-color: var(--background-color);
 }
 .goal_14{
-    position: absolute;
+  position: absolute;
   width: 20vh;
 }
 .change-1 {
