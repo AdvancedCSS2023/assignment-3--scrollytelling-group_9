@@ -98,6 +98,15 @@ THE BEGINNING:
 /*.clouds{
     position: absolute;
 }*/
+.water {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  left: 0%;
+  top: 63%;
+  background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
+}
+
 .iceberg {
   margin-left: 20%;
 }
@@ -119,14 +128,38 @@ THE BEGINNING:
 }
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
-  position: absolute;
+  position: fixed;
 }
 
 .head-move {
-  position: absolute;
+  transform-origin: left;
+  position: fixed;
   width: 100vw;
   height: 100vw;
-  animation: head-animation 3s alternate infinite linear;
+  animation: head-animation 4s alternate infinite linear;
+  animation-timing-function: ease-in-out;
+}
+
+.leftLeg-move {
+  transform-origin: top left;
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  animation: leg-animation 4s alternate infinite linear;
+  animation-timing-function: ease-in-out;
+}
+
+.rightLeg-move {
+  transform-origin: top center;
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  animation: leg-animation 3s alternate infinite linear;
+  animation-timing-function: ease-in-out;
+}
+
+.icebear {
+  position: absolute;
 }
 
 @keyframes iceberg-animation {
@@ -139,13 +172,24 @@ THE BEGINNING:
 }
 @keyframes head-animation {
   0% {
-    transform: rotate(1deg);
+    transform: rotate(0.5deg);
   }
   50% {
-    transform: rotate(-1deg);
+    transform: rotate(-0.5deg);
   }
   100% {
     transform: rotate(-1deg);
+  }
+}
+@keyframes leg-animation {
+  0% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-0.2deg);
+  }
+  100% {
+    transform: rotate(1deg);
   }
 }
 /* scene 2

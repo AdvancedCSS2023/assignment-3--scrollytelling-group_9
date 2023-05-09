@@ -23,57 +23,102 @@ THE BEGINNING:
 .scene1 {
 
 }
+
+.water{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    left: 0%;
+    top: 63%;
+    background: linear-gradient(to top, rgba(169,208,113,0),rgba(21,119,143,1)); 
+}
+
 .iceberg {
 margin-left: 20%;
-  }
+}
 
-  .ice-platform {
+.ice-platform {
     position: absolute;
-  }
-  
-  .ice-overlay {
+}
+
+.ice-overlay {
     z-index: -1;
     position: absolute;
     animation: iceberg-animation 1s alternate infinite linear;
-  }
-  
-  .ice-bottom {
+}
+
+.ice-bottom {
     z-index: -2;
     position: absolute;
     animation: iceberg-animation 3s alternate infinite linear;
-  }
-  
-  .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
-    position: absolute;
-  }
-  
-  .head-move {
-    position: absolute;
+}
+
+.icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
+    position: fixed;
+}
+
+.head-move {
+    transform-origin: left;
+    position: fixed;
     width: 100vw;
     height: 100vw;
-    animation: head-animation 3s alternate infinite linear;
-  }
+    animation: head-animation 4s alternate infinite linear;
+    animation-timing-function: ease-in-out;
+}
 
-  .icebear__body {
-  }
-  
-  @keyframes iceberg-animation {
+.leftLeg-move{
+    transform-origin: top left;
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    animation: leg-animation 4s alternate infinite linear;
+    animation-timing-function: ease-in-out;
+}
+
+.rightLeg-move{
+    transform-origin: top center;
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    animation: leg-animation 3s alternate infinite linear;
+    animation-timing-function: ease-in-out;
+}
+
+.icebear {
+    position: absolute;
+    
+}
+
+@keyframes iceberg-animation {
     0% {
-      transform: rotate(2deg);
+    transform: rotate(2deg);
     }
     100% {
-      transform: rotate(-2deg);
+    transform: rotate(-2deg);
     }
-  }
-  @keyframes head-animation {
+}
+
+@keyframes head-animation {
     0% {
-      transform: rotate(1deg);
+    transform: rotate(0.5deg);
     }
     50% {
-      transform: rotate(-1deg);
+    transform: rotate(-0.5deg);
     }
     100% {
-      transform: rotate(-1deg);
+    transform: rotate(-1deg);
     }
-  }
-  
+}
+
+@keyframes leg-animation {
+    0% {
+    transform: rotate(0.5deg);
+    }
+    50% {
+    transform: rotate(-0.2deg);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
