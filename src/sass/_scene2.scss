@@ -23,55 +23,55 @@ MIDDLE
     }
 }
 
-.small__fish, .cluster__fish{
-    animation: fish-animation-1 10s infinite;
-}
+// .small__fish, .cluster__fish{
+//     animation: fish-animation-1 10s infinite;
+// }
 
 
-@keyframes fish-animation-1{
-    from {
-        transform: translateX(1300px);
-    }
-    to {
-        transform: translateX(-1700px);
-    }
-}
+// @keyframes fish-animation-1{
+//     from {
+//         transform: translateX(1300px);
+//     }
+//     to {
+//         transform: translateX(-1700px);
+//     }
+// }
 
-.big__fish, .small__amount__fish{
-    animation: fish-animation-2 14s infinite;
-}
+// .big__fish, .small__amount__fish{
+//     animation: fish-animation-2 14s infinite;
+// }
 
-@keyframes fish-animation-2{
-    from {
-        transform: translateX(-1300px);
-    }
-    to {
-        transform: translateX(1700px);
-    }
-}
+// @keyframes fish-animation-2{
+//     from {
+//         transform: translateX(-1300px);
+//     }
+//     to {
+//         transform: translateX(1700px);
+//     }
+// }
 
 .trash{
     animation: trash-animation 7s ease-in infinite;
 }
 
-@keyframes trash-animation {
-    0%{
-        transform: translateY(0);
-    }
-    30%{
-        transform: translateY(50px);
-    }
-    50%{
-        transform: translateY(100px);
-    }
-    70%{
-        transform: translateY(50px);
-    }
-    100%{
-        transform: translateY(0);
-    }
+// @keyframes trash-animation {
+//     0%{
+//         transform: translateY(0);
+//     }
+//     30%{
+//         transform: translateY(50px);
+//     }
+//     50%{
+//         transform: translateY(100px);
+//     }
+//     70%{
+//         transform: translateY(50px);
+//     }
+//     100%{
+//         transform: translateY(0);
+//     }
 
-}
+// }
 
 .trash__sock{
     margin-left: 100px;
