@@ -6,76 +6,72 @@ MIDDLE
 •	We can also see plastic, toxic waste, dying see life, biohazard sign.
 */
 
-.scroll-section {
-    &--scene2 {
+.scroll-section--scene2 {
     display: grid;
-    margin-top: 1440px;
+    margin-top: 160vh;
+}
+
+.scroll-section__globalwarmingfacts {
+    margin: 2vh;
+    width: 40vw;
+}
+
+.scroll-section__globalwarmingfacts2 {
+    margin: 2vh;
+    width: 40vw;
+}
+
+.small__fish, .cluster__fish {
+    animation: fish-animation-1 10s infinite;
+}
+
+@keyframes fish-animation-1 {
+    from {
+        transform: translateX(130vw);
     }
-    
-    &__globalwarmingfacts {
-    margin: 20px;
-    width: 400px;
+    to {
+        transform: translateX(-170vw);
     }
-    
-    &__globalwarmingfacts2 {
-    margin: 20px;
-    width: 400px;
+}
+.big__fish, .small__amount__fish {
+    animation: fish-animation-2 14s infinite;
+}
+
+
+@keyframes fish-animation-2 {
+    from {
+        transform: translateX(-130vw);
+    }
+    to {
+        transform: translateX(170vw);
     }
 }
 
-// .small__fish, .cluster__fish{
-//     animation: fish-animation-1 10s infinite;
-// }
-
-
-// @keyframes fish-animation-1{
-//     from {
-//         transform: translateX(1300px);
-//     }
-//     to {
-//         transform: translateX(-1700px);
-//     }
-// }
-
-// .big__fish, .small__amount__fish{
-//     animation: fish-animation-2 14s infinite;
-// }
-
-// @keyframes fish-animation-2{
-//     from {
-//         transform: translateX(-1300px);
-//     }
-//     to {
-//         transform: translateX(1700px);
-//     }
-// }
-
-.trash{
+.trash {
     animation: trash-animation 7s ease-in infinite;
 }
 
-// @keyframes trash-animation {
-//     0%{
-//         transform: translateY(0);
-//     }
-//     30%{
-//         transform: translateY(50px);
-//     }
-//     50%{
-//         transform: translateY(100px);
-//     }
-//     70%{
-//         transform: translateY(50px);
-//     }
-//     100%{
-//         transform: translateY(0);
-//     }
+@keyframes trash-animation {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(5.56vh);
+    }
+    50% {
+        transform: translateY(11.11vh);
+    }
+    70% {
+        transform: translateY(5.56vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
-// }
-
-.trash__sock{
-    margin-left: 100px;
-    height: 20px;
+.trash__sock {
+    margin-left: 10vw;
+    height: 2.22vh;
 }
 
 .scene2 {

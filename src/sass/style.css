@@ -1,6 +1,18 @@
 @charset "UTF-8";
+:root {
+  --text-color: black;
+  --background-color: white;
+}
+
+[data-theme=dark] {
+  --text-color: white;
+  --background-color: black;
+}
+
 body {
   transition: 3s background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
 }
 
 .change-1 {
@@ -13,27 +25,63 @@ body {
   position: absolute;
   width: 100%;
   min-height: 100vh;
-  margin-top: 1080px;
+  margin-top: 100vh;
 }
 
 .change-3 {
   position: absolute;
   width: 100%;
   min-height: 100vh;
-  margin-top: 2160px;
+  margin-top: 200vh;
 }
 
 .change-4 {
   position: absolute;
   width: 100%;
   min-height: 100vh;
-  margin-top: 3240px;
+  margin-top: 300vh;
 }
 
 * {
   overflow-x: hidden;
 }
 
+.scroll-section--scene1 {
+  display: grid;
+}
+
+.scroll-section__quote {
+  margin: 2vh;
+  width: 40vw;
+}
+
+* {
+  overflow-x: hidden;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.scroll-section__howtofix {
+  padding-top: 50vh;
+}
+
+/*
+@media (prefers-reduced-motion: reduce) {
+  Disable all animations
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+*/
 /* scene 1 
 ------------------------------------------------
 THE BEGINNING:
@@ -41,21 +89,17 @@ THE BEGINNING:
 •	Narrator – Give facts to viewers.
 •	Polo bear is on an iceberg, and it starts to slowly sink, while viewer is scrolling down.
 */
-.scroll-section--scene1 {
-  display: grid;
-}
 .scroll-section__quote {
-  margin: 20px;
-  width: 400px;
+  margin: 20vw;
+  width: 40vw;
 }
 
 /* scene 1 ------------------------------------------------*/
 /*.clouds{
     position: absolute;
 }*/
-.iceberg, .icebear {
-  display: grid;
-  justify-items: center;
+.iceberg {
+  margin-left: 20%;
 }
 
 .ice-platform {
@@ -74,18 +118,14 @@ THE BEGINNING:
   animation: iceberg-animation 3s alternate infinite linear;
 }
 
-.icebear {
-  margin-top: -150px;
-}
-
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
   position: absolute;
 }
 
 .head-move {
   position: absolute;
-  width: 900px;
-  height: 900px;
+  width: 100vw;
+  height: 100vw;
   animation: head-animation 3s alternate infinite linear;
 }
 
@@ -99,13 +139,13 @@ THE BEGINNING:
 }
 @keyframes head-animation {
   0% {
-    transform: rotate(8deg);
+    transform: rotate(1deg);
   }
   50% {
-    transform: rotate(-2deg);
+    transform: rotate(-1deg);
   }
   100% {
-    transform: rotate(-8deg);
+    transform: rotate(-1deg);
   }
 }
 /* scene 2
@@ -117,15 +157,17 @@ MIDDLE
 */
 .scroll-section--scene2 {
   display: grid;
-  margin-top: 1440px;
+  margin-top: 160vh;
 }
+
 .scroll-section__globalwarmingfacts {
-  margin: 20px;
-  width: 400px;
+  margin: 2vh;
+  width: 40vw;
 }
+
 .scroll-section__globalwarmingfacts2 {
-  margin: 20px;
-  width: 400px;
+  margin: 2vh;
+  width: 40vw;
 }
 
 .small__fish, .cluster__fish {
@@ -134,10 +176,10 @@ MIDDLE
 
 @keyframes fish-animation-1 {
   from {
-    transform: translateX(1300px);
+    transform: translateX(130vw);
   }
   to {
-    transform: translateX(-1700px);
+    transform: translateX(-170vw);
   }
 }
 .big__fish, .small__amount__fish {
@@ -146,10 +188,10 @@ MIDDLE
 
 @keyframes fish-animation-2 {
   from {
-    transform: translateX(-1300px);
+    transform: translateX(-130vw);
   }
   to {
-    transform: translateX(1700px);
+    transform: translateX(170vw);
   }
 }
 .trash {
@@ -161,74 +203,95 @@ MIDDLE
     transform: translateY(0);
   }
   30% {
-    transform: translateY(50px);
+    transform: translateY(5.56vh);
   }
   50% {
-    transform: translateY(100px);
+    transform: translateY(11.11vh);
   }
   70% {
-    transform: translateY(50px);
+    transform: translateY(5.56vh);
   }
   100% {
     transform: translateY(0);
   }
 }
 .trash__sock {
-  margin-left: 100px;
-  height: 20px;
+  margin-left: 10vw;
+  height: 2.22vh;
 }
 
 .scene2 {
   overflow: hidden;
 }
 
-.scroll-section .scroll-section {
+.scroll-section {
   /*The whole scene*/
 }
-.scroll-section .scroll-section--scene3 {
-  display: grid;
+.scroll-section--scene3 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
-.scroll-section .scroll-section__howtofix {
-  font-size: 25px;
+.scroll-section__howtofix {
+  font-size: 2.5vh;
   z-index: 1;
-  width: 500px;
+  width: 30vw;
   color: red;
   position: absolute;
-  top: 25%;
-  left: 25%;
 }
-.scroll-section .scroll-section__img1 {
-  width: 250px;
+.scroll-section__img1 {
   position: absolute;
   z-index: 1;
-  transform: translate(1000px, 620px);
+  width: 10vw;
+  height: 10vh;
+  bottom: 0;
+  left: 10vw;
 }
-.scroll-section .scroll-section__img2 {
-  width: 500px;
+.scroll-section__img2 {
   position: absolute;
   z-index: 1;
-  transform: translate(100px, 600px);
+  width: 10vw;
+  height: 10vh;
+  bottom: 15vh;
+  left: 45vw;
 }
-.scroll-section .scroll-section__img3 {
-  width: 400px;
+.scroll-section__img3 {
   position: absolute;
   z-index: 1;
-  transform: translate(1400px, 200px);
+  width: 30vw;
+  height: 30vh;
+  bottom: 20vh;
+  left: 5vw;
 }
-.scroll-section .scroll-section__img4 {
-  width: 200px;
+.scroll-section__img4 {
   position: absolute;
   z-index: 1;
-  transform: translate(42px, 100px);
+  width: 50vw;
+  height: 50vh;
+  bottom: 20vh;
+  left: 50vw;
 }
-.scroll-section .scroll-section__img5 {
-  width: 100vw;
+.scroll-section__img5 {
   position: absolute;
-  transform: translate(-30px, 600px);
+  bottom: 0;
+  left: 0;
 }
-.scroll-section .scroll-section__img6 {
-  width: 400px;
-  margin-bottom: 0;
+.scroll-section__img6 {
   position: absolute;
-  transform: rotate(180deg) translate(-1000px, -700px);
+  bottom: 0;
+  left: 80vw;
+  width: 10vw;
+  height: 10vh;
+  height: auto;
+  transform: rotate(180deg);
+}
+.scroll-section__bottom {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  animation: fadeIn 5s;
+}
+.scroll-section .fade-in {
+  opacity: 1;
+  transition: opacity 5s;
 }/*# sourceMappingURL=style.css.map */
