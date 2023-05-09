@@ -1,20 +1,19 @@
 .scroll-section {
     /*The whole scene*/
-  
     &--scene3 {
       position: relative;
       width: 100vw;
       height: 100vh;
     }
-  
+
     &__howtofix {
       font-size: 2.5vh;
       z-index: 1;
       width: 30vw;
-      color: red;
+      color: rgb(99, 99, 99);
       position: absolute;
     }
-  
+
     &__img1 {
       position: absolute;
       z-index: 1;
@@ -23,7 +22,7 @@
       bottom: 0;
       left: 10vw;
     }
-  
+
     &__img2 {
       position: absolute;
       z-index: 1;

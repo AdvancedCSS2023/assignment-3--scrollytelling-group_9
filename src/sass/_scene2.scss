@@ -34,21 +34,40 @@ MIDDLE
     }
 }
 .big__fish, .small__amount__fish {
-    animation: fish-animation-2 14s infinite;
+    animation: fish-animation-2 10s infinite;
 }
 
+.big__fish{
+    margin-top: 230vh;
+}
 
 @keyframes fish-animation-2 {
     from {
-        transform: translateX(-130vw);
+        transform: translateX(-110vw);
     }
     to {
-        transform: translateX(170vw);
+        transform: translateX(130vw);
     }
 }
 
 .trash {
     animation: trash-animation 7s ease-in infinite;
+}
+
+.trash__bag{
+    margin-bottom: 200vh;
+    margin-left: 120vh;
+    // position: relative;
+}
+
+.trash__can{
+    margin-left: 100vh;
+    margin-bottom: 260vh;
+    position: relative;
+}
+
+.trash__spoon{
+    margin-left: 50vh;
 }
 
 @keyframes trash-animation {
@@ -71,7 +90,7 @@ MIDDLE
 
 .trash__sock {
     margin-left: 10vw;
-    height: 2.22vh;
+
 }
 
 .scene2 {

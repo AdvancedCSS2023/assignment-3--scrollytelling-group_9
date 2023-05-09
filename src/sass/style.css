@@ -15,6 +15,10 @@ body {
   background-color: var(--background-color);
 }
 
+.goal_14 {
+  width: 20vh;
+}
+
 .change-1 {
   position: absolute;
   width: 100%;
@@ -183,19 +187,38 @@ MIDDLE
   }
 }
 .big__fish, .small__amount__fish {
-  animation: fish-animation-2 14s infinite;
+  animation: fish-animation-2 10s infinite;
+}
+
+.big__fish {
+  margin-top: 230vh;
 }
 
 @keyframes fish-animation-2 {
   from {
-    transform: translateX(-130vw);
+    transform: translateX(-110vw);
   }
   to {
-    transform: translateX(170vw);
+    transform: translateX(130vw);
   }
 }
 .trash {
   animation: trash-animation 7s ease-in infinite;
+}
+
+.trash__bag {
+  margin-bottom: 200vh;
+  margin-left: 120vh;
+}
+
+.trash__can {
+  margin-left: 100vh;
+  margin-bottom: 260vh;
+  position: relative;
+}
+
+.trash__spoon {
+  margin-left: 50vh;
 }
 
 @keyframes trash-animation {
@@ -217,7 +240,6 @@ MIDDLE
 }
 .trash__sock {
   margin-left: 10vw;
-  height: 2.22vh;
 }
 
 .scene2 {
@@ -236,7 +258,7 @@ MIDDLE
   font-size: 2.5vh;
   z-index: 1;
   width: 30vw;
-  color: red;
+  color: rgb(99, 99, 99);
   position: absolute;
 }
 .scroll-section__img1 {
