@@ -1,5 +1,5 @@
 :root {
-    --text-color: black;
+    --text-color: rgb(0, 0, 0);
     --background-color: white;
   }
   
@@ -60,17 +60,28 @@ body {
     overflow-x: hidden;
 }
 .fade-in {
-    opacity: 1;
-    transition: opacity 1s;
-  }
+  opacity: 1;
+  transition: opacity 1s;
+}
+
 .fade-out {
-    opacity: 0;
-    transition: opacity 1s;
-  }
+  opacity: 0;
+  transition: opacity 1s;
+}
 
 .scroll-section__howtofix {
-    padding-top: 50vh;
+  padding-top: 50vh;
+
+    & p, li {
+      background-color: rgb(163, 192, 217);
+      color: black;
+      padding: 10px;
+      border-radius: 20px;
+      margin: 10px;
+    }
 }
+
+
 /*
 @media (prefers-reduced-motion: reduce) {
   Disable all animations

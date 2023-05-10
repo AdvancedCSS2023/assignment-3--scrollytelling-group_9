@@ -1,6 +1,6 @@
 @charset "UTF-8";
 :root {
-  --text-color: black;
+  --text-color: rgb(0, 0, 0);
   --background-color: white;
 }
 
@@ -77,6 +77,13 @@ body {
 .scroll-section__howtofix {
   padding-top: 50vh;
 }
+.scroll-section__howtofix p, .scroll-section__howtofix li {
+  background-color: rgb(163, 192, 217);
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+}
 
 /*
 @media (prefers-reduced-motion: reduce) {
@@ -103,6 +110,26 @@ THE BEGINNING:
 /*.clouds{
     position: absolute;
 }*/
+.clouds .cloud_1 {
+  position: absolute;
+  margin-left: 100vh;
+  width: 50vh;
+  z-index: -1;
+}
+.clouds .cloud_2 {
+  position: absolute;
+  margin-left: 50vh;
+  width: 20vh;
+  z-index: -1;
+}
+.clouds .cloud_3 {
+  position: absolute;
+  margin-top: 25vh;
+  margin-left: 140vh;
+  width: 20vh;
+  z-index: -2;
+}
+
 .water {
   position: absolute;
   width: 100%;
@@ -353,8 +380,9 @@ MIDDLE
   transform: rotate(180deg);
 }
 .scroll-section__bottom {
-  font-size: 30px;
+  font-size: 33px;
   color: white;
+  background-color: none;
   text-align: center;
   animation: fadeIn 5s;
 }
