@@ -78,3 +78,9 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
 } else {
   document.documentElement.setAttribute('data-theme', 'light');
 }
+
+const particles = document.querySelectorAll('.particle');
+
+particles.forEach((particle, index) => {
+  particle.style.left = `${83.5 + Math.random() * 5}vw`;
+});
