@@ -16,11 +16,9 @@ THE BEGINNING:
     }
 }
 /* scene 1 ------------------------------------------------*/
-/*.clouds{
-    position: absolute;
-}*/
-.clouds{
 
+.clouds{
+    animation: cloud_animation 10s infinite alternate;
     .cloud_1{
         position: absolute;
         margin-left: 100vh;
@@ -44,6 +42,15 @@ THE BEGINNING:
     }
 }
 
+@keyframes cloud_animation{
+    from {
+    margin-left: 20vh;
+    }
+    
+    to {
+    margin-left: 0;
+    }
+}
 .water{
     position: absolute;
     width: 100%;
@@ -59,17 +66,23 @@ margin-left: 20%;
 
 .ice-platform {
     position: absolute;
+    width: 900px;
+    height: 900px;
 }
 
 .ice-overlay {
     z-index: -1;
     position: absolute;
+    height: 900px;
+    width: 900px;
     animation: iceberg-animation 1s alternate infinite linear;
 }
 
 .ice-bottom {
     z-index: -2;
     position: absolute;
+    height: 900px;
+    width: 900px;
     animation: iceberg-animation 3s alternate infinite linear;
 }
 

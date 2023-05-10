@@ -85,15 +85,46 @@ body {
   margin: 10px;
 }
 
-/*
 @media (prefers-reduced-motion: reduce) {
-  Disable all animations
-  * {
+  Disable all animations * {
     animation: none !important;
     transition: none !important;
   }
 }
-*/
+@media only screen and (max-width: 400px) {
+  body {
+    margin: 0;
+  }
+  .water {
+    width: 100vw;
+  }
+  .cloud_1 {
+    width: 2vh;
+    margin: 0;
+    animation: none;
+  }
+  .cloud_2, .cloud_3 {
+    display: none;
+  }
+  .iceberg {
+    display: none;
+  }
+  .trash {
+    height: 30vh;
+  }
+  p {
+    margin: 0;
+  }
+  .scroll-section img {
+    height: 100vw;
+    margin: 0;
+  }
+  .scroll-section__bottom {
+    font-size: 20px;
+    display: flex;
+    color: pink;
+  }
+}
 /* scene 1 
 ------------------------------------------------
 THE BEGINNING:
@@ -107,9 +138,9 @@ THE BEGINNING:
 }
 
 /* scene 1 ------------------------------------------------*/
-/*.clouds{
-    position: absolute;
-}*/
+.clouds {
+  animation: cloud_animation 10s infinite alternate;
+}
 .clouds .cloud_1 {
   position: absolute;
   margin-left: 100vh;
@@ -130,6 +161,14 @@ THE BEGINNING:
   z-index: -2;
 }
 
+@keyframes cloud_animation {
+  from {
+    margin-left: 20vh;
+  }
+  to {
+    margin-left: 0;
+  }
+}
 .water {
   position: absolute;
   width: 100%;
@@ -145,17 +184,23 @@ THE BEGINNING:
 
 .ice-platform {
   position: absolute;
+  width: 900px;
+  height: 900px;
 }
 
 .ice-overlay {
   z-index: -1;
   position: absolute;
+  height: 900px;
+  width: 900px;
   animation: iceberg-animation 1s alternate infinite linear;
 }
 
 .ice-bottom {
   z-index: -2;
   position: absolute;
+  height: 900px;
+  width: 900px;
   animation: iceberg-animation 3s alternate infinite linear;
 }
 
@@ -231,6 +276,10 @@ MIDDLE
 •	Soon the iceberg is melted, the polo bear sinks down under water.
 •	We can also see plastic, toxic waste, dying see life, biohazard sign.
 */
+.scene2 {
+  overflow: hidden;
+}
+
 .scroll-section--scene2 {
   display: grid;
   margin-top: 160vh;
@@ -246,8 +295,8 @@ MIDDLE
   width: 40vw;
 }
 
-.small__fish, .cluster__fish {
-  animation: fish-animation-1 10s infinite;
+.small__fish, .cluster__fish, .small__fish__2 {
+  animation: fish-animation-1 7s infinite;
 }
 
 @keyframes fish-animation-1 {
@@ -312,10 +361,6 @@ MIDDLE
 }
 .trash__sock {
   margin-left: 10vw;
-}
-
-.scene2 {
-  overflow: hidden;
 }
 
 .scroll-section {

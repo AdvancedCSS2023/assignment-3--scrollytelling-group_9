@@ -1,18 +1,19 @@
 :root {
-    --text-color: rgb(0, 0, 0);
-    --background-color: white;
-  }
-  
-  [data-theme="dark"] {
-    --text-color: white;
-    --background-color: black;
-  }
+  --text-color: rgb(0, 0, 0);
+  --background-color: white;
+}
+
+[data-theme="dark"] {
+  --text-color: white;
+  --background-color: black;
+}
 
 body {
   transition: 3s background-color;
   color: var(--text-color);
   background-color: var(--background-color);
 }
+
 .goal_14{
   position: absolute;
   width: 20vh;
@@ -57,8 +58,9 @@ body {
 }
 
 * {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
+
 .fade-in {
   opacity: 1;
   transition: opacity 1s;
@@ -82,7 +84,7 @@ body {
 }
 
 
-/*
+// ---------------- MEDIA QUERIES --------------------
 @media (prefers-reduced-motion: reduce) {
   Disable all animations
   * {
@@ -90,4 +92,52 @@ body {
     transition: none !important;
   }
 }
-*/
+
+@media only screen and (max-width: 400px){
+  // scene 1
+  body{
+    margin: 0;
+  }
+  .goal_14{
+
+  }
+  .water{
+    width: 100vw;
+  }
+
+  .cloud_1{
+    width: 2vh;
+    margin: 0;
+    animation: none;
+  }
+
+  .cloud_2, .cloud_3{
+    display: none;
+  }
+
+  .iceberg{
+    display: none;
+  }
+
+// scene 2  
+  .trash{
+    height: 30vh;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .scroll-section img{
+    height: 100vw;
+    margin: 0;
+  }
+
+
+  // scene 3
+  .scroll-section__bottom {
+    font-size: 20px;
+    display: flex;
+    color: pink;
+  }
+}
