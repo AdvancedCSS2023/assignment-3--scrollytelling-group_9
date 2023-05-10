@@ -2,6 +2,7 @@
 :root {
   --text-color: black;
   --background-color: white;
+  overflow-x: hidden;
 }
 
 [data-theme=dark] {
@@ -47,8 +48,11 @@ body {
   margin-top: 300vh;
 }
 
-* {
-  overflow-x: hidden;
+.change-5 {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 400vh;
 }
 
 .scroll-section--scene1 {
@@ -56,7 +60,6 @@ body {
 }
 
 .scroll-section__quote {
-  margin: 2vh;
   width: 40vw;
 }
 
@@ -298,6 +301,7 @@ MIDDLE
   position: relative;
   width: 100vw;
   height: 100vh;
+  background-image: linear-gradient(to top, rgb(239, 239, 239), rgba(239, 239, 239, 0));
 }
 .scroll-section__howtofix {
   font-size: 2.5vh;
@@ -352,13 +356,82 @@ MIDDLE
   height: auto;
   transform: rotate(180deg);
 }
-.scroll-section__bottom {
-  font-size: 30px;
-  color: white;
-  text-align: center;
-  animation: fadeIn 5s;
-}
 .scroll-section .fade-in {
   opacity: 1;
   transition: opacity 5s;
+}
+.scroll-section__images::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 150%);
+  z-index: 1000;
+}
+
+.scroll-section {
+  /*The whole scene*/
+}
+.scroll-section--scene4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+}
+.scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
+  position: absolute; /* Add this */
+  font-size: 5vh;
+  text-align: center;
+  animation: fadeInOut 40s infinite;
+  width: 50vw;
+  display: block;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.scroll-section__bottom1 {
+  animation-delay: 0s;
+}
+.scroll-section__bottom2 {
+  animation-delay: 10s;
+}
+.scroll-section__bottom3 {
+  animation-delay: 20s;
+}
+.scroll-section__bottom4 {
+  animation-delay: 30s;
+}
+@keyframes fadeInOut {
+  0%, 16.66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  16.67%, 20% {
+    opacity: 0;
+    visibility: visible;
+    transform: scale(1);
+  }
+  25%, 33.33% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+  }
+  33.34%, 37.5% {
+    opacity: 1;
+    visibility: visible;
+  }
+  41.67%, 50% {
+    opacity: 0;
+    visibility: visible;
+  }
+  50.01%, 100% {
+    visibility: hidden;
+  }
 }/*# sourceMappingURL=style.css.map */

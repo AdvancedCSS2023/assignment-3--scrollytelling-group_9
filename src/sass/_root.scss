@@ -1,13 +1,15 @@
 :root {
     --text-color: black;
     --background-color: white;
+    overflow-x: hidden;
   }
   
   [data-theme="dark"] {
     --text-color: white;
     --background-color: black;
   }
-  
+
+
 body {
   transition: 3s background-color;
   color: var(--text-color);
@@ -44,15 +46,17 @@ body {
   margin-top: 300vh;
 }
 
-* {
-  overflow-x: hidden;
+.change-5 {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 400vh;
 }
 
 .scroll-section--scene1 {
   display: grid;
 }
 .scroll-section__quote {
-  margin: 2vh;
   width: 40vw;
 }
 
