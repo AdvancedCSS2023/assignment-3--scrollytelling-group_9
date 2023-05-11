@@ -95,7 +95,8 @@ body {
   }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and ((min-width: 400px)
+and (max-width: 400px)){
   // scene 1
   body{
     margin: 0;
@@ -108,25 +109,32 @@ body {
   }
 
   .cloud_1{
-    width: 2px;
+    height: 10vh;
+    width: 10vw;
     animation: unset;
     position: inherit;
   }
 
   .cloud_2, .cloud_3{
+    height: 10vh;
+    width: 10vw;
     display: none;
   }
 
   .iceberg{
     // transform: scale(100);
-    // display: grid;
+    //display: grid;
     // justify-items: center;
     // align-items: center;
     // left: 7vh;
     // position: relative;
+    height: 5vh;
+    max-width: 5vw;
   }
 
   .icebear{
+    height: 5vh;
+    max-width: 5vw;
   }
 
 // scene 2  
@@ -142,7 +150,7 @@ body {
   }
 
   .scroll-section img{
-    height: 100vw;
+    height: 100vh;
     margin: 0;
   }
 

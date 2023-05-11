@@ -91,7 +91,7 @@ body {
     transition: none !important;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and ((min-width: 400px) and (max-width: 400px)) {
   body {
     margin: 0;
   }
@@ -99,12 +99,23 @@ body {
     width: 100vw;
   }
   .cloud_1 {
-    width: 2px;
+    height: 10vh;
+    width: 10vw;
     animation: unset;
     position: inherit;
   }
   .cloud_2, .cloud_3 {
+    height: 10vh;
+    width: 10vw;
     display: none;
+  }
+  .iceberg {
+    height: 5vh;
+    max-width: 5vw;
+  }
+  .icebear {
+    height: 5vh;
+    max-width: 5vw;
   }
   .trash {
     right: 0;
@@ -115,7 +126,7 @@ body {
     margin: 0;
   }
   .scroll-section img {
-    height: 100vw;
+    height: 100vh;
     margin: 0;
   }
   .scroll-section__bottom {
@@ -138,26 +149,29 @@ THE BEGINNING:
 
 /* scene 1 ------------------------------------------------*/
 .clouds {
-  animation: cloud_animation 10s infinite alternate;
+  animation: cloud_animation 10s infinite alternate linear;
 }
 .clouds .cloud_1 {
   position: absolute;
   left: 100vh;
-  width: 50vh;
+  width: 50vw;
   z-index: -1;
+  animation: cloud_animation 10s infinite alternate linear;
 }
 .clouds .cloud_2 {
   position: absolute;
   left: 50vh;
-  width: 20vh;
+  width: 20vw;
   z-index: -1;
+  animation: cloud_animation 10s infinite alternate linear;
 }
 .clouds .cloud_3 {
   position: absolute;
   top: 25vh;
   left: 130vh;
-  width: 20vh;
+  width: 20vw;
   z-index: -2;
+  animation: cloud_animation 10s infinite alternate linear;
 }
 
 @keyframes cloud_animation {
@@ -190,14 +204,14 @@ THE BEGINNING:
 .ice-platform {
   position: absolute;
   height: 127vh;
-  width: 127vh;
+  width: 127vw;
 }
 
 .ice-overlay {
   z-index: -1;
   position: absolute;
   height: 127vh;
-  width: 127vh;
+  width: 127vw;
   animation: iceberg-animation 1s alternate infinite linear;
 }
 
@@ -205,21 +219,21 @@ THE BEGINNING:
   z-index: -2;
   position: absolute;
   height: 127vh;
-  width: 127vh;
+  width: 127vw;
   animation: iceberg-animation 3s alternate infinite linear;
 }
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
   position: fixed;
   height: 127vh;
-  width: 127vh;
+  width: 127vw;
 }
 
 .head-move {
   transform-origin: left;
   position: fixed;
   height: 127vh;
-  width: 127vh;
+  width: 127vw;
   animation: head-animation 4s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
@@ -228,7 +242,7 @@ THE BEGINNING:
   transform-origin: top left;
   position: fixed;
   height: 127vh;
-  width: 127vh;
+  width: 127vw;
   animation: leg-animation 4s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
@@ -237,7 +251,7 @@ THE BEGINNING:
   transform-origin: top center;
   position: fixed;
   height: 127vh;
-  width: 127vh;
+  width: 127vw;
   animation: leg-animation 3s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
