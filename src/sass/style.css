@@ -91,12 +91,13 @@ body {
     transition: none !important;
   }
 }
-@media only screen and ((min-width: 400px) and (max-width: 400px)) {
+@media only screen and (mix-width: 400px) {
   body {
     margin: 0;
   }
   .water {
     width: 100vw;
+    top: 100vh;
   }
   .cloud_1 {
     height: 10vh;
@@ -111,11 +112,11 @@ body {
   }
   .iceberg {
     height: 5vh;
-    max-width: 5vw;
+    width: 5vw;
   }
   .icebear {
     height: 5vh;
-    max-width: 5vw;
+    width: 5vw;
   }
   .trash {
     right: 0;
@@ -130,7 +131,7 @@ body {
     margin: 0;
   }
   .scroll-section__bottom {
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     color: pink;
   }
@@ -153,30 +154,31 @@ THE BEGINNING:
 }
 .clouds .cloud_1 {
   position: absolute;
+  top: 15vh;
   left: 100vh;
-  width: 50vw;
+  width: 20vw;
   z-index: -1;
-  animation: cloud_animation 10s infinite alternate linear;
+  animation: cloud_animation 8s infinite alternate linear;
 }
 .clouds .cloud_2 {
   position: absolute;
   left: 50vh;
-  width: 20vw;
+  width: 10vw;
   z-index: -1;
   animation: cloud_animation 10s infinite alternate linear;
 }
 .clouds .cloud_3 {
   position: absolute;
-  top: 25vh;
+  top: 30vh;
   left: 130vh;
   width: 20vw;
   z-index: -2;
-  animation: cloud_animation 10s infinite alternate linear;
+  animation: cloud_animation 15s infinite alternate linear;
 }
 
 @keyframes cloud_animation {
   from {
-    left: 20vh;
+    left: 80%;
   }
   to {
     left: 0;

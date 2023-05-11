@@ -95,8 +95,8 @@ body {
   }
 }
 
-@media only screen and ((min-width: 400px)
-and (max-width: 400px)){
+@media only screen and (mix-width: 400px)
+{
   // scene 1
   body{
     margin: 0;
@@ -106,6 +106,7 @@ and (max-width: 400px)){
   }
   .water{
     width: 100vw;
+    top: 100vh;
   }
 
   .cloud_1{
@@ -129,12 +130,12 @@ and (max-width: 400px)){
     // left: 7vh;
     // position: relative;
     height: 5vh;
-    max-width: 5vw;
+    width: 5vw;
   }
 
   .icebear{
     height: 5vh;
-    max-width: 5vw;
+    width: 5vw;
   }
 
 // scene 2  
@@ -157,7 +158,7 @@ and (max-width: 400px)){
 
   // scene 3
   .scroll-section__bottom {
-    font-size: 20px;
+    font-size: 15px;
     display: flex;
     color: pink;
   }

@@ -21,33 +21,34 @@ THE BEGINNING:
     animation: cloud_animation 10s infinite alternate linear;
     .cloud_1{
         position: absolute;
+        top: 15vh;
         left: 100vh;
-        width: 50vw;
+        width: 20vw;
         z-index: -1;
-        animation: cloud_animation 10s infinite alternate linear;
+        animation: cloud_animation 8s infinite alternate linear;
     }
 
     .cloud_2{
         position: absolute;
         left: 50vh;
-        width: 20vw;
+        width: 10vw;
         z-index: -1;
         animation: cloud_animation 10s infinite alternate linear;
     }
 
     .cloud_3{
         position: absolute;
-        top: 25vh;
+        top: 30vh;
         left: 130vh;
         width: 20vw;
         z-index: -2;
-        animation: cloud_animation 10s infinite alternate linear;
+        animation: cloud_animation 15s infinite alternate linear;
     }
 }
 
 @keyframes cloud_animation{
     from {
-    left: 20vh;
+    left: 80%;
     }
     
     to {
