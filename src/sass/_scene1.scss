@@ -64,6 +64,9 @@ THE BEGINNING:
 .iceberg {
     display: grid;
     justify-items: center;
+    align-items: center;
+    margin-top: 35vh;
+
 }
 
 .iceberg-full{
@@ -127,9 +130,10 @@ THE BEGINNING:
 }
 
 .icebear {
-    // width: 100%;
     display: grid;
     justify-items: center;
+    align-items: center;
+    margin-top: 1vh;
 }
 
 @keyframes iceberg-animation {

@@ -106,6 +106,9 @@ body {
   .cloud_2, .cloud_3 {
     display: none;
   }
+  .scroll-section__howtofix {
+    width: 0;
+  }
   .trash {
     right: 0;
     bottom: 0;
@@ -180,6 +183,8 @@ THE BEGINNING:
 .iceberg {
   display: grid;
   justify-items: center;
+  align-items: center;
+  margin-top: 35vh;
 }
 
 .iceberg-full {
@@ -245,6 +250,8 @@ THE BEGINNING:
 .icebear {
   display: grid;
   justify-items: center;
+  align-items: center;
+  margin-top: 1vh;
 }
 
 @keyframes iceberg-animation {
