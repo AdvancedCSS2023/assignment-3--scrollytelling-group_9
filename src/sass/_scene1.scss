@@ -36,7 +36,7 @@ THE BEGINNING:
     .cloud_3{
         position: absolute;
         top: 25vh;
-        left: 140vh;
+        left: 130vh;
         width: 20vh;
         z-index: -2;
     }
@@ -44,13 +44,14 @@ THE BEGINNING:
 
 @keyframes cloud_animation{
     from {
-    margin-left: 20vh;
+    left: 20vh;
     }
     
     to {
-    margin-left: 0;
+    left: 0;
     }
 }
+
 .water{
     position: absolute;
     width: 100%;
@@ -61,42 +62,43 @@ THE BEGINNING:
 }
 
 .iceberg {
-margin-left: 20%;
+    display: grid;
+    justify-items: center;
 }
 
 .ice-platform {
     position: absolute;
-    width: 900px;
-    height: 900px;
+    height: 127vh;
+    width: 127vh;
 }
 
 .ice-overlay {
     z-index: -1;
     position: absolute;
-    height: 900px;
-    width: 900px;
+    height: 127vh;
+    width: 127vh;
     animation: iceberg-animation 1s alternate infinite linear;
 }
 
 .ice-bottom {
     z-index: -2;
     position: absolute;
-    height: 900px;
-    width: 900px;
+    height: 127vh;
+    width: 127vh;
     animation: iceberg-animation 3s alternate infinite linear;
 }
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
     position: fixed;
-    height: 900px;
-    width: 900px;
+    height: 127vh;
+    width: 127vh;
 }
 
 .head-move {
     transform-origin: left;
     position: fixed;
-    height: 900px;
-    width: 900px;
+    height: 127vh;
+    width: 127vh;
     animation: head-animation 4s alternate infinite linear;
     animation-timing-function: ease-in-out;
 }
@@ -104,8 +106,8 @@ margin-left: 20%;
 .leftLeg-move{
     transform-origin: top left;
     position: fixed;
-    height: 900px;
-    width: 900px;
+    height: 127vh;
+    width: 127vh;
     animation: leg-animation 4s alternate infinite linear;
     animation-timing-function: ease-in-out;
 }
@@ -113,15 +115,16 @@ margin-left: 20%;
 .rightLeg-move{
     transform-origin: top center;
     position: fixed;
-    height: 900px;
-    width: 900px;
+    height: 127vh;
+    width: 127vh;
     animation: leg-animation 3s alternate infinite linear;
     animation-timing-function: ease-in-out;
 }
 
 .icebear {
-    position: absolute;
-    
+    // width: 100%;
+    display: grid;
+    justify-items: center;
 }
 
 @keyframes iceberg-animation {
