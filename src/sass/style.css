@@ -99,20 +99,21 @@ body {
     width: 100vw;
   }
   .cloud_1 {
-    width: 2vh;
-    margin: 0;
-    animation: none;
+    width: 2px;
+    animation: unset;
   }
   .cloud_2, .cloud_3 {
     display: none;
   }
   .iceberg {
-    display: none;
+    width: 0;
   }
   .trash {
-    height: 30vh;
+    right: 0;
+    bottom: 0;
+    top: 0;
   }
-  p {
+  p, li {
     margin: 0;
   }
   .scroll-section img {
@@ -143,20 +144,20 @@ THE BEGINNING:
 }
 .clouds .cloud_1 {
   position: absolute;
-  margin-left: 100vh;
+  left: 100vh;
   width: 50vh;
   z-index: -1;
 }
 .clouds .cloud_2 {
   position: absolute;
-  margin-left: 50vh;
+  left: 50vh;
   width: 20vh;
   z-index: -1;
 }
 .clouds .cloud_3 {
   position: absolute;
-  margin-top: 25vh;
-  margin-left: 140vh;
+  top: 25vh;
+  left: 140vh;
   width: 20vh;
   z-index: -2;
 }
@@ -206,13 +207,15 @@ THE BEGINNING:
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
   position: fixed;
+  height: 900px;
+  width: 900px;
 }
 
 .head-move {
   transform-origin: left;
   position: fixed;
-  width: 100vw;
-  height: 100vw;
+  height: 900px;
+  width: 900px;
   animation: head-animation 4s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
@@ -220,8 +223,8 @@ THE BEGINNING:
 .leftLeg-move {
   transform-origin: top left;
   position: fixed;
-  width: 100vw;
-  height: 100vw;
+  height: 900px;
+  width: 900px;
   animation: leg-animation 4s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
@@ -229,8 +232,8 @@ THE BEGINNING:
 .rightLeg-move {
   transform-origin: top center;
   position: fixed;
-  width: 100vw;
-  height: 100vw;
+  height: 900px;
+  width: 900px;
   animation: leg-animation 3s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }

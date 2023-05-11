@@ -106,9 +106,8 @@ body {
   }
 
   .cloud_1{
-    width: 2vh;
-    margin: 0;
-    animation: none;
+    width: 2px;
+    animation: unset;
   }
 
   .cloud_2, .cloud_3{
@@ -116,15 +115,18 @@ body {
   }
 
   .iceberg{
-    display: none;
+    width: 0;
   }
 
 // scene 2  
   .trash{
-    height: 30vh;
+    right: 0;
+    bottom: 0;
+    top: 0;
+
   }
 
-  p {
+  p, li {
     margin: 0;
   }
 

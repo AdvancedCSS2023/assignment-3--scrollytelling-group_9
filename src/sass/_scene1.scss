@@ -21,22 +21,22 @@ THE BEGINNING:
     animation: cloud_animation 10s infinite alternate;
     .cloud_1{
         position: absolute;
-        margin-left: 100vh;
+        left: 100vh;
         width: 50vh;
         z-index: -1;
     }
 
     .cloud_2{
         position: absolute;
-        margin-left: 50vh;
+        left: 50vh;
         width: 20vh;
         z-index: -1;
     }
 
     .cloud_3{
         position: absolute;
-        margin-top: 25vh;
-        margin-left: 140vh;
+        top: 25vh;
+        left: 140vh;
         width: 20vh;
         z-index: -2;
     }
@@ -88,13 +88,15 @@ margin-left: 20%;
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
     position: fixed;
+    height: 900px;
+    width: 900px;
 }
 
 .head-move {
     transform-origin: left;
     position: fixed;
-    width: 100vw;
-    height: 100vw;
+    height: 900px;
+    width: 900px;
     animation: head-animation 4s alternate infinite linear;
     animation-timing-function: ease-in-out;
 }
@@ -102,8 +104,8 @@ margin-left: 20%;
 .leftLeg-move{
     transform-origin: top left;
     position: fixed;
-    width: 100vw;
-    height: 100vw;
+    height: 900px;
+    width: 900px;
     animation: leg-animation 4s alternate infinite linear;
     animation-timing-function: ease-in-out;
 }
@@ -111,8 +113,8 @@ margin-left: 20%;
 .rightLeg-move{
     transform-origin: top center;
     position: fixed;
-    width: 100vw;
-    height: 100vw;
+    height: 900px;
+    width: 900px;
     animation: leg-animation 3s alternate infinite linear;
     animation-timing-function: ease-in-out;
 }
