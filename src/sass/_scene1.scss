@@ -22,7 +22,7 @@ THE BEGINNING:
     .cloud_1{
         position: absolute;
         left: 100vh;
-        width: 50vw;
+        width: 20vw;
         z-index: -1;
         animation: cloud_animation 10s infinite alternate linear;
     }
@@ -59,7 +59,6 @@ THE BEGINNING:
     position: absolute;
     width: 100vw;
     height: 70vh;
-    left: 0;
     top: 34vw;
     background: linear-gradient(to top, rgba(169,208,113,0),rgba(21,119,143,1)); 
 }

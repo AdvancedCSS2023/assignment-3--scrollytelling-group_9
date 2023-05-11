@@ -111,7 +111,7 @@ and (max-width: 400px)){
   }
   .water{
     width: 100vw;
-    top: 50vh;
+    top: 134vw;
   }
 
   .cloud_1{
@@ -166,9 +166,7 @@ and (max-width: 400px)){
 
 
   // scene 3
-  .scroll-section__bottom {
-    font-size: 20px;
-    display: flex;
-    color: pink;
+  .scroll-section__bottom1, .scroll-section__bottom2,   .scroll-section__bottom3{
+    font-size: 0.5vh;
   }
 }

@@ -101,7 +101,7 @@ body {
   }
   .water {
     width: 100vw;
-    top: 50vh;
+    top: 134vw;
   }
   .cloud_1 {
     height: 10vh;
@@ -138,10 +138,8 @@ body {
     height: 45vh;
     margin: 0;
   }
-  .scroll-section__bottom {
-    font-size: 20px;
-    display: flex;
-    color: pink;
+  .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3 {
+    font-size: 0.5vh;
   }
 }
 /* scene 1 
@@ -163,7 +161,7 @@ THE BEGINNING:
 .clouds .cloud_1 {
   position: absolute;
   left: 100vh;
-  width: 50vw;
+  width: 20vw;
   z-index: -1;
   animation: cloud_animation 10s infinite alternate linear;
 }
@@ -195,7 +193,6 @@ THE BEGINNING:
   position: absolute;
   width: 100vw;
   height: 70vh;
-  left: 0;
   top: 34vw;
   background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
 }
