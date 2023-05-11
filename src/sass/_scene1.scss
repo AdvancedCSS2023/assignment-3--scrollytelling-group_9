@@ -24,6 +24,7 @@ THE BEGINNING:
         left: 100vh;
         width: 50vh;
         z-index: -1;
+        animation: cloud_animation 10s infinite alternate;
     }
 
     .cloud_2{
@@ -31,6 +32,7 @@ THE BEGINNING:
         left: 50vh;
         width: 20vh;
         z-index: -1;
+        animation: cloud_animation 10s infinite alternate;
     }
 
     .cloud_3{
@@ -39,6 +41,7 @@ THE BEGINNING:
         left: 130vh;
         width: 20vh;
         z-index: -2;
+        animation: cloud_animation 10s infinite alternate;
     }
 }
 
