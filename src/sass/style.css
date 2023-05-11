@@ -198,7 +198,7 @@ THE BEGINNING:
   background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
 }
 
-.iceberg {
+.iceberg, .icebear {
   display: grid;
   justify-items: center;
   align-items: center;
@@ -233,14 +233,14 @@ THE BEGINNING:
 }
 
 .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
-  position: absolute;
+  position: fixed;
   height: 127vh;
   width: 127vw;
 }
 
 .head-move {
   transform-origin: left;
-  position: absolute;
+  position: fixed;
   height: 127vh;
   width: 127vw;
   animation: head-animation 4s alternate infinite linear;
@@ -249,7 +249,7 @@ THE BEGINNING:
 
 .leftLeg-move {
   transform-origin: top left;
-  position: absolute;
+  position: fixed;
   height: 127vh;
   width: 127vw;
   animation: leg-animation 4s alternate infinite linear;
@@ -258,7 +258,7 @@ THE BEGINNING:
 
 .rightLeg-move {
   transform-origin: top center;
-  position: absolute;
+  position: fixed;
   height: 127vh;
   width: 127vw;
   animation: leg-animation 3s alternate infinite linear;
@@ -266,9 +266,6 @@ THE BEGINNING:
 }
 
 .icebear {
-  display: grid;
-  justify-items: center;
-  align-items: center;
   margin-top: 1vh;
 }
 
