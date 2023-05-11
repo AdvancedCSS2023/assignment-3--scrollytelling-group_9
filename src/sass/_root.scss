@@ -105,6 +105,7 @@ body {
   }
   .water{
     width: 100vw;
+    top: 50vh;
   }
 
   .cloud_1{
@@ -118,19 +119,21 @@ body {
   }
 
   .iceberg{
-    // transform: scale(100);
     // display: grid;
     // justify-items: center;
     // align-items: center;
     // left: 7vh;
     // position: relative;
+
   }
 
-  .icebear{
+  .iceberg-full, .ice-platform, .ice-overlay, .ice-bottom, .icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face, .head-move, .leftLeg-move, .rightLeg-move, .icebear, .iceberg{
+
   }
 
 .scroll-section__howtofix{
   width: 0;
+  margin: 0;
 }
 
 // scene 2  
@@ -138,7 +141,6 @@ body {
     right: 0;
     bottom: 0;
     top: 0;
-
   }
 
   p, li {
@@ -146,7 +148,7 @@ body {
   }
 
   .scroll-section img{
-    height: 100vw;
+    height: 100vh;
     margin: 0;
   }
 

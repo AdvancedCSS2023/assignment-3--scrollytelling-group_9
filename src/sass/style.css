@@ -97,6 +97,7 @@ body {
   }
   .water {
     width: 100vw;
+    top: 50vh;
   }
   .cloud_1 {
     width: 2px;
@@ -108,6 +109,7 @@ body {
   }
   .scroll-section__howtofix {
     width: 0;
+    margin: 0;
   }
   .trash {
     right: 0;
@@ -118,7 +120,7 @@ body {
     margin: 0;
   }
   .scroll-section img {
-    height: 100vw;
+    height: 100vh;
     margin: 0;
   }
   .scroll-section__bottom {
