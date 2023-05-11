@@ -95,7 +95,7 @@ body {
     transition: none !important;
   }
 }
-@media only screen and (mix-width: 400px) {
+@media only screen and (mix-width: 700px) {
   body {
     margin: 0;
   }
@@ -142,67 +142,48 @@ body {
     font-size: 0.5vh;
   }
 }
-/* scene 1 
-------------------------------------------------
-THE BEGINNING:
-•	Polo bear – main character 
-•	Narrator – Give facts to viewers.
-•	Polo bear is on an iceberg, and it starts to slowly sink, while viewer is scrolling down.
-*/
-.scroll-section__quote {
-  margin: 20vw;
-  width: 40vw;
-}
-
-/* scene 1 ------------------------------------------------*/
-.clouds {
-  animation: cloud_animation 10s infinite alternate linear;
-}
-.clouds .cloud_1 {
-  position: absolute;
-  top: 15vh;
-  left: 100vh;
-  width: 20vw;
-  z-index: -1;
-  animation: cloud_animation 8s infinite alternate linear;
-}
-.clouds .cloud_2 {
-  position: absolute;
-  left: 50vh;
-  width: 10vw;
-  z-index: -1;
-  animation: cloud_animation 10s infinite alternate linear;
-}
-.clouds .cloud_3 {
-  position: absolute;
-  top: 30vh;
-  left: 130vh;
-  width: 20vw;
-  z-index: -2;
-  animation: cloud_animation 15s infinite alternate linear;
-}
-
-@keyframes cloud_animation {
-  from {
-    left: 80%;
-  }
-  to {
-    left: 0;
-  }
-}
-.water {
+.scene1 {
   position: absolute;
   width: 100vw;
-  height: 70vh;
-  top: 34vw;
-  background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.iceberg {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  margin-top: 35vh;
+.clouds .cloud {
+  position: absolute;
+  width: 100vw;
+  z-index: 10;
+  animation: cloud_animation 10s infinite alternate linear;
+}
+
+.clouds .cloud_1 {
+  top: 10vh;
+  left: 10vh;
+  height: 20vh;
+}
+
+.clouds .cloud_2 {
+  width: 10vw;
+  left: 50vh;
+  top: 20vh;
+}
+
+.clouds .cloud_3 {
+  top: 30vh;
+  width: 50vw;
+  left: 20vh;
+  z-index: 5;
+}
+
+.water {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 34vh;
+  background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
 }
 
 .iceberg-full {
@@ -210,107 +191,89 @@ THE BEGINNING:
   animation-delay: 3s;
 }
 
-.ice-platform {
-  position: absolute;
-  height: 127vh;
-  width: 127vw;
-}
-
-.ice-overlay {
-  z-index: -1;
-  position: absolute;
-  height: 127vh;
-  width: 127vw;
-  animation: iceberg-animation 1s alternate infinite linear;
-}
-
+.ice-platform,
+.ice-overlay,
 .ice-bottom {
-  z-index: -2;
   position: absolute;
-  height: 127vh;
-  width: 127vw;
-  animation: iceberg-animation 3s alternate infinite linear;
-}
-
-.icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
-  position: fixed;
-  height: 127vh;
-  width: 127vw;
-}
-
-.head-move {
-  transform-origin: left;
-  position: fixed;
-  height: 127vh;
-  width: 127vw;
-  animation: head-animation 4s alternate infinite linear;
-  animation-timing-function: ease-in-out;
-}
-
-.leftLeg-move {
-  transform-origin: top left;
-  position: fixed;
-  height: 127vh;
-  width: 127vw;
-  animation: leg-animation 4s alternate infinite linear;
-  animation-timing-function: ease-in-out;
-}
-
-.rightLeg-move {
-  transform-origin: top center;
-  position: fixed;
-  height: 127vh;
-  width: 127vw;
-  animation: leg-animation 3s alternate infinite linear;
-  animation-timing-function: ease-in-out;
+  top: 0;
+  left: 0;
+  height: 80vw;
+  width: 80vw;
 }
 
 .icebear {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  margin-top: 1vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101; /* Increase the z-index to position it above the iceberg */
+}
+.icebear .head-move,
+.icebear .leftLeg-move,
+.icebear .rightLeg-move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vw;
+  width: 80vw;
+}
+.icebear .head-move {
+  animation: head-animation 4s alternate infinite linear;
+  animation-timing-function: ease-in-out;
+}
+.icebear .leftLeg-move {
+  transform-origin: top left;
+  animation: leg-animation 4s alternate infinite linear;
+}
+.icebear .rightLeg-move {
+  transform-origin: top center;
+  animation: leg-animation 3s alternate infinite linear;
+}
+.icebear .icebear-footLeft,
+.icebear .icebear-footRight {
+  position: absolute;
+  z-index: 1000;
+  bottom: 0;
+  left: 0;
+  height: 80vw;
+  width: 80vw;
 }
 
+@keyframes cloud_animation {
+  from {
+    left: 80vw;
+  }
+  to {
+    left: 0;
+  }
+}
 @keyframes iceberg-animation {
-  0% {
+  0%, 100% {
     transform: rotate(2deg);
   }
-  100% {
+  50% {
     transform: rotate(-2deg);
   }
 }
 @keyframes head-animation {
-  0% {
+  0%, 100% {
     transform: rotate(0.5deg);
   }
   50% {
     transform: rotate(-0.5deg);
   }
-  100% {
-    transform: rotate(-1deg);
-  }
 }
 @keyframes leg-animation {
-  0% {
+  0%, 100% {
     transform: rotate(0.5deg);
   }
-  50% {
-    transform: rotate(-0.2deg);
-  }
-  100% {
-    transform: rotate(1deg);
-  }
-}
-@keyframes iceberg-fade-animation {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
+  @keyframes iceberg-fade-animation {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
   }
 }
 /* scene 2
