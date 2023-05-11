@@ -194,7 +194,7 @@ THE BEGINNING:
   position: absolute;
   width: 100vw;
   height: 70vh;
-  top: 34vw;
+  top: 60vh;
   background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
 }
 
@@ -426,39 +426,45 @@ MIDDLE
 .scroll-section__img1 {
   position: absolute;
   z-index: 1;
+  top: 65vh;
   width: 10vw;
   height: 10vh;
-  bottom: 0;
   left: 10vw;
+  z-index: 1000;
 }
 .scroll-section__img2 {
   position: absolute;
   z-index: 1;
   width: 10vw;
   height: 10vh;
-  bottom: 15vh;
+  top: 90vh;
   left: 45vw;
+  z-index: 1000;
 }
 .scroll-section__img3 {
   position: absolute;
   z-index: 1;
   width: 30vw;
   height: 30vh;
-  bottom: 20vh;
+  top: 35vh;
   left: 5vw;
+  z-index: 1000;
 }
 .scroll-section__img4 {
   position: absolute;
   z-index: 1;
   width: 50vw;
-  height: 50vh;
-  bottom: 20vh;
+  height: 30vh;
+  top: 38vh;
   left: 50vw;
+  z-index: 1000;
 }
 .scroll-section__img5 {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100vw;
+  z-index: 999;
 }
 .scroll-section__img6 {
   position: absolute;
@@ -466,7 +472,8 @@ MIDDLE
   left: 80vw;
   width: 10vw;
   height: 10vh;
-  height: auto;
+  top: 89vh;
+  z-index: 1000;
   transform: rotate(180deg);
 }
 .scroll-section__img7 {
@@ -475,22 +482,12 @@ MIDDLE
   left: 80vw;
   width: 20vw;
   height: 10vh;
+  z-index: 999;
   height: auto;
 }
 .scroll-section .fade-in {
   opacity: 1;
   transition: opacity 5s;
-}
-.scroll-section__images::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 150%);
-  z-index: 1000;
 }
 @keyframes moveParticles {
   0% {
@@ -511,6 +508,14 @@ MIDDLE
   animation: moveParticles 2s linear infinite;
   margin-bottom: 40vh;
   border-radius: 50%;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 .scroll-section .particle:nth-child(2n) {
   animation-duration: 7s;
@@ -541,8 +546,8 @@ MIDDLE
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: black;
-  z-index: 100;
+  background-image: linear-gradient(to top, rgb(32, 21, 21), rgb(19, 8, 8));
+  z-index: 1000;
 }
 .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
   position: absolute; /* Add this */

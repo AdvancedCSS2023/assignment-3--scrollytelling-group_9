@@ -7,8 +7,8 @@
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    background-color: black;
-    z-index: 100;
+    background-image: linear-gradient(to top, rgba(32, 21, 21, 100), rgb(19, 8, 8));
+    z-index: 1000;
   }
   &__bottom1, &__bottom2, &__bottom3, &__bottom4 {
     position: absolute; /* Add this */
