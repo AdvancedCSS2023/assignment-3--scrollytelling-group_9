@@ -18,7 +18,7 @@ body {
 
 .goal_14 {
   position: absolute;
-  width: 20vh;
+  width: 10vh;
   padding-left: 0.2vw;
 }
 
@@ -98,6 +98,10 @@ body {
 @media only screen and (mix-width: 400px) {
   body {
     margin: 0;
+  }
+  .goal_14 {
+    width: 10%;
+    height: 10%;
   }
   .water {
     width: 100vw;
@@ -194,7 +198,7 @@ THE BEGINNING:
   position: absolute;
   width: 100vw;
   height: 70vh;
-  top: 60vh;
+  top: 58vh;
   background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
 }
 
