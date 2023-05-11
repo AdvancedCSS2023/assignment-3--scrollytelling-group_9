@@ -18,6 +18,7 @@ body {
   position: absolute;
   width: 20vh;
 }
+
 .change-1 {
   position: absolute;
   width: 100%;
@@ -52,6 +53,7 @@ body {
 .scroll-section--scene1 {
   display: grid;
 }
+
 .scroll-section__quote {
   margin: 2vh;
   width: 40vw;
@@ -108,6 +110,7 @@ body {
   .cloud_1{
     width: 2px;
     animation: unset;
+    position: inherit;
   }
 
   .cloud_2, .cloud_3{

@@ -101,6 +101,7 @@ body {
   .cloud_1 {
     width: 2px;
     animation: unset;
+    position: inherit;
   }
   .cloud_2, .cloud_3 {
     display: none;
