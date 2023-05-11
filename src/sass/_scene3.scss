@@ -4,6 +4,7 @@
       position: relative;
       width: 100vw;
       height: 100vh;
+      background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
     }
 
     &__howtofix {
@@ -66,15 +67,71 @@
       transform: rotate(180deg);
     }
 
-    &__bottom {
-        font-size: 33px;
-        color: white;
-        background-color: none;
-        text-align: center;
-        animation: fadeIn 5s;
+    &__img7 {
+      position: absolute;
+      bottom: 0;
+      left: 80vw;
+      width: 20vw;
+      height: 10vh;
+      height: auto;
     }
+
     .fade-in {
         opacity: 1;
         transition: opacity 5s;
+      }
+
+      &__images::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgb(0, 0, 0) 150%);
+        z-index: 1000;
+      }
+      @keyframes moveParticles {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-100vh);
+          opacity: 0;
+        }
+      }
+      
+      .particle {
+        position: absolute;
+        bottom: 0;
+        background: green;
+        width: 25px;
+        height: 25px;
+        animation: moveParticles 2s linear infinite;
+        margin-bottom: 40vh;
+        border-radius: 50%;
+      }
+      
+      .particle:nth-child(2n) {
+        animation-duration: 7s;
+      }
+      
+      .particle:nth-child(3n) {
+        animation-duration: 7s;
+      }
+      
+      .particle:nth-child(4n) {
+        animation-duration: 6s;
+      }
+      .particle:nth-child(5n) {
+        animation-duration: 7s;
+      }
+      .particle:nth-child(6n) {
+        animation-duration: 6s;
+      }
+      .particle:nth-child(7n) {
+        animation-duration: 4s;
       }
   }

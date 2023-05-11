@@ -1,12 +1,14 @@
 :root {
-  --text-color: rgb(0, 0, 0);
-  --background-color: white;
-}
+    --text-color: black;
+    --background-color: white;
+    overflow-x: hidden;
+  }
+  
+  [data-theme="dark"] {
+    --text-color: white;
+    --background-color: black;
+  }
 
-[data-theme="dark"] {
-  --text-color: white;
-  --background-color: black;
-}
 
 body {
   transition: 3s background-color;
@@ -17,6 +19,7 @@ body {
 .goal_14{
     position: absolute;
   width: 20vh;
+  padding-left: 0.2vw;
 }
 
 .change-1 {
@@ -46,8 +49,11 @@ body {
   margin-top: 300vh;
 }
 
-* {
-  overflow-x: hidden;
+.change-5 {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 400vh;
 }
 
 .scroll-section--scene1 {
@@ -55,7 +61,6 @@ body {
 }
 
 .scroll-section__quote {
-  margin: 2vh;
   width: 40vw;
 }
 
@@ -95,8 +100,7 @@ body {
   }
 }
 
-@media only screen and (mix-width: 400px)
-{
+@media only screen and (mix-width: 400px){
   // scene 1
   body{
     margin: 0;
@@ -106,7 +110,7 @@ body {
   }
   .water{
     width: 100vw;
-    top: 100vh;
+    top: 134vw;
   }
 
   .cloud_1{
@@ -138,12 +142,16 @@ body {
     width: 5vw;
   }
 
+.scroll-section__howtofix{
+  width: 0;
+  margin: 0;
+}
+
 // scene 2  
   .trash{
     right: 0;
     bottom: 0;
     top: 0;
-
   }
 
   p, li {
@@ -151,15 +159,13 @@ body {
   }
 
   .scroll-section img{
-    height: 100vh;
+    height: 45vh;
     margin: 0;
   }
 
 
   // scene 3
-  .scroll-section__bottom {
-    font-size: 15px;
-    display: flex;
-    color: pink;
+  .scroll-section__bottom1, .scroll-section__bottom2,   .scroll-section__bottom3{
+    font-size: 0.5vh;
   }
 }
