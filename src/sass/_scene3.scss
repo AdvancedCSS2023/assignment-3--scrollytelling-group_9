@@ -1,137 +1,122 @@
+/* scene 2
+------------------------------------------------
+*/
+
 .scroll-section {
-    /*The whole scene*/
-    &--scene3 {
-      position: relative;
-      width: 100vw;
-      height: 100vh;
-      background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
-
-    }
-
-    &__howtofix {
-      font-size: 2.5vh;
-      z-index: 1;
-      width: 30vw;
-      color: rgb(99, 99, 99);
-      position: absolute;
-    }
-
-    &__img1 {
-      position: absolute;
-      bottom: 0;
-      width: 10vw;
-      height: 10vh;
-      left: 10vw;
-      z-index: 1000;
-    }
-
-    &__img2 {
-      position: absolute;
-      width: 10vw;
-      height: 10vh;
-      bottom: 0;
-      left: 45vw;
-      z-index: 1000;
-    }
-  
-    &__img3 {
-      position: absolute;
-      width: 10vw;
-      bottom: 0;
-      padding-bottom: 10vh;
-      left: 5vw;
-      z-index: 1000;
-    }
-  
-    &__img4 {
-      position: absolute;
-      bottom: 0;
-      width: 10vw;
-      padding-bottom: 10vh;
-      left: 60vw;
-      z-index: 1000;
-    }
-  
-    &__img5 {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100vw;
-      z-index: 999;
-    }
-  
-    &__img6 {
-      position: absolute;
-      bottom: 0;
-      left: 60vw;
-      width: 10vw;
-      height: 20vh;
-      z-index: 1000;
-      transform: rotate(180deg);
-    }
-
-    &__img7 {
-      position: absolute;
-      bottom: 0;
-      left: 80vw;
-      width: 20vw;
-      height: 10vh;
-      z-index: 999;
-      height: auto;
-    }
-
-    .fade-in {
-        opacity: 1;
-        transition: opacity 5s;
-      }
-
-      @keyframes moveParticles {
-        0% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(-100vh);
-          opacity: 0;
-        }
-      }
-      
-      .particle {
-        position: absolute;
-        bottom: 0;
-        background: green;
-        width: 25px;
-        height: 25px;
-        animation: moveParticles 2s linear infinite;
-        margin-bottom: 40vh;
-        border-radius: 50%;
-      }
-
-      @keyframes fadeOut {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
-      }
-      
-      
-      .particle:nth-child(2n) {
-        animation-duration: 7s;
-      }
-      
-      .particle:nth-child(3n) {
-        animation-duration: 7s;
-      }
-      
-      .particle:nth-child(4n) {
-        animation-duration: 6s;
-      }
-      .particle:nth-child(5n) {
-        animation-duration: 7s;
-      }
-      .particle:nth-child(6n) {
-        animation-duration: 6s;
-      }
-      .particle:nth-child(7n) {
-        animation-duration: 4s;
-      }
+  &--scene3 {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(239,239,239,255), rgba(239,239,239,0));
+    margin: 0;
   }
-  
+
+  &__howtofix {
+    position: absolute;
+    font-size: 2.5vh;
+    z-index: 1;
+    width: 30vw;
+    color: rgb(99, 99, 99);
+  }
+
+  &__img1, &__img2, &__img3, &__img4, &__img6 {
+    position: absolute;
+    bottom: 0;
+    width: 10vw;
+    height: 10vh;
+    z-index: 1000;
+  }
+
+  &__img1 {
+    left: 10vw;
+  }
+
+  &__img2 {
+    left: 45vw;
+  }
+
+  &__img3, &__img4 {
+    padding-bottom: 10vh;
+  }
+
+  &__img3 {
+    left: 5vw;
+  }
+
+  &__img4 {
+    left: 60vw;
+  }
+
+  &__img5 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 999;
+  }
+
+  &__img6 {
+    left: 60vw;
+    transform: rotate(180deg);
+  }
+
+  &__img7 {
+    position: absolute;
+    bottom: 0;
+    left: 80vw;
+    width: 20vw;
+    height: auto;
+    z-index: 999;
+  }
+}
+
+.fade-in {
+opacity: 1;
+transition: opacity 5s;
+}
+
+@keyframes moveParticles {
+0% {
+  transform: translateY(0);
+  opacity: 1;
+}
+100% {
+  transform: translateY(-100vh);
+  opacity: 0;
+}
+}
+
+.particle {
+position: absolute;
+bottom: 0;
+background: green;
+width: 25px;
+height: 25px;
+animation: moveParticles 2s linear infinite;
+margin-bottom: 40vh;
+border-radius: 50%;
+}
+
+.particle:nth-child(2n) {
+animation-duration: 7s;
+}
+
+.particle:nth-child(3n) {
+animation-duration: 7s;
+}
+
+.particle:nth-child(4n) {
+animation-duration: 6s;
+}
+
+.particle:nth-child(5n) {
+animation-duration: 7s;
+}
+
+.particle:nth-child(6n) {
+animation-duration: 6s;
+}
+
+.particle:nth-child(7n) {
+animation-duration: 4s;
+}
