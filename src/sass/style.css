@@ -529,9 +529,9 @@ body {
   animation-duration: 4s;
 }
 
-/* scene 4
-------------------------------------------------
-*/
+.scroll-section {
+  /*The whole scene*/
+}
 .scroll-section--scene4 {
   position: relative;
   display: flex;
@@ -543,12 +543,12 @@ body {
   z-index: 1000;
 }
 .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
-  position: absolute;
-  font-size: 3vh;
+  position: absolute; /* Add this */
+  font-size: 5vh;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   animation: fadeInOut 40s infinite;
-  width: 30vw;
+  width: 50vw;
   display: block;
   animation-timing-function: ease-in-out;
   opacity: 0;
@@ -566,20 +566,30 @@ body {
 .scroll-section__bottom4 {
   animation-delay: 30s;
 }
-
 @keyframes fadeInOut {
-  0%, 16.66%, 50.01%, 100% {
-    visibility: hidden;
+  0%, 16.66% {
     opacity: 0;
+    visibility: hidden;
   }
-  16.67%, 20%, 33.34%, 37.5% {
+  16.67%, 20% {
+    opacity: 0;
     visibility: visible;
     transform: scale(1);
-    opacity: 0;
   }
-  25%, 33.33%, 41.67%, 50% {
+  25%, 33.33% {
+    opacity: 1;
     visibility: visible;
     transform: scale(1.1);
+  }
+  33.34%, 37.5% {
     opacity: 1;
+    visibility: visible;
+  }
+  41.67%, 50% {
+    opacity: 0;
+    visibility: visible;
+  }
+  50.01%, 100% {
+    visibility: hidden;
   }
 }/*# sourceMappingURL=style.css.map */
