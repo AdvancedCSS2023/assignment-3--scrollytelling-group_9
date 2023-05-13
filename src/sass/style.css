@@ -82,11 +82,29 @@ body {
   padding-top: 50vh;
 }
 .scroll-section__howtofix p, .scroll-section__howtofix li {
-  background-color: rgb(163, 192, 217);
-  color: black;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 15px;
   margin: 10px;
+  /*color: white;
+  -webkit-text-stroke: 0.5px black;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-shadow: 2px 2px 8px white;
+  background: linear-gradient(#0b3b52, #19b1ba) padding-box,
+          linear-gradient(to right, white, orange) border-box;
+  border-radius: 20px;
+  border: 3px solid transparent;*/
+  background-color: #007dbc;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: 2px 5px 10px white;
+  border-radius: 5px;
+  /*background-color: whitesmoke;
+  color: black;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  background: linear-gradient(white, gray) padding-box,
+          linear-gradient(to right, white, gray) border-box;
+  border-radius: 10px;
+  border: 3px solid transparent;*/
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -95,13 +113,13 @@ body {
     transition: none !important;
   }
 }
-@media only screen and (mix-width: 400px) {
+@media only screen and (max-width: 300px) {
   body {
     margin: 0;
   }
   .goal_14 {
-    width: 10%;
-    height: 10%;
+    width: 14%;
+    height: 5%;
   }
   .water {
     width: 100vw;
@@ -129,21 +147,23 @@ body {
   .scroll-section__howtofix {
     width: 0;
     margin: 0;
+    padding: 5px;
+  }
+  .scroll-section__howtofix p, .scroll-section__howtofix li {
+    margin: 0;
+    font-size: 12px;
   }
   .trash {
     right: 0;
     bottom: 0;
     top: 0;
   }
-  p, li {
-    margin: 0;
-  }
   .scroll-section img {
     height: 45vh;
     margin: 0;
   }
   .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3 {
-    font-size: 0.5vh;
+    font-size: 1vh;
   }
 }
 /* scene 1 
@@ -553,6 +573,7 @@ MIDDLE
 .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
   position: absolute; /* Add this */
   font-size: 5vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
   animation: fadeInOut 40s infinite;
   width: 50vw;
