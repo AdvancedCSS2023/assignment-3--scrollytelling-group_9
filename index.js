@@ -80,7 +80,7 @@ if (window.innerHeight > window.innerWidth) {
 }
 }, false);
 
-// Initial check
+// Check if its a mobile device
 if (isMobileDevice() && window.innerHeight > window.innerWidth) {
 document.getElementById('landscape-message').style.display = 'block';
 }
@@ -90,6 +90,8 @@ document.getElementById('ok-button').addEventListener('click', function() {
 document.getElementById('landscape-message').style.display = 'none';
 });
 
+//if its a pc remove the whole message, I had to ad this because it sometimes loaded in by defaultt
+// on pc
 if (!isMobileDevice()) {
   document.getElementById('landscape-message').style.display = 'none';
 }
