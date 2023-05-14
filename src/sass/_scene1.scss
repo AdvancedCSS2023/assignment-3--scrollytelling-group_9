@@ -52,7 +52,7 @@
     }
 }
 
-.water{
+.water__element{
     position: absolute;
     width: 100vw;
     height: 70vh;
@@ -61,25 +61,20 @@
     background: linear-gradient(to top, rgba(169,208,113,0),rgba(21,119,143,1)); 
 }
 
-.iceberg, .icebear {
+.iceberg__element, .icebear_element {
     display: grid;
     justify-items: center;
     align-items: center;
     margin-top: 35vh;
 }
 
-.iceberg-full{
-    animation: iceberg-fade-animation 10s alternate linear;
-    animation-delay: 3s;
-}
-
-.ice-platform {
+.iceplatform__element--modifier {
     position: absolute;
     height: 127vh;
     width: 127vw;
 }
 
-.ice-overlay {
+.iceoverlay__element--modifier {
     z-index: -1;
     position: absolute;
     height: 127vh;
@@ -87,7 +82,7 @@
     animation: iceberg-animation 1s alternate infinite linear;
 }
 
-.ice-bottom {
+.icebottom__element--modifier {
     z-index: -2;
     position: absolute;
     height: 127vh;
@@ -95,13 +90,13 @@
     animation: iceberg-animation 3s alternate infinite linear;
 }
 
-.icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
+.icebear-body__element--modifier, .icebear-headBase__element--modifier, .icebear-legLeft__element--modifier, .icebear-legRight__element--modifier, .icebear-footLeft__element--modifier, .icebear-footRight__element--modifier, .icebear-tail__element--modifier{
     position: fixed;
     height: 127vh;
     width: 127vw;
 }
 
-.head-move{
+.headmove__element--modifier{
     transform-origin: left;
     position: fixed;
     height: 127vh;
@@ -110,7 +105,7 @@
     animation-timing-function: ease-in-out;
 }
 
-.leftLeg-move{
+.leftLeg-move__element--modifier{
     transform-origin: top left;
     position: fixed;
     height: 127vh;
@@ -119,7 +114,7 @@
     animation-timing-function: ease-in-out;
 }
 
-.rightLeg-move{
+.rightLeg-move__element--modifier{
     transform-origin: top center;
     position: fixed;
     height: 127vh;
@@ -128,7 +123,7 @@
     animation-timing-function: ease-in-out;
 }
 
-.icebear {
+.icebear_element{
     margin-top: 1vh;
 }
 
