@@ -83,34 +83,14 @@ body {
   padding-top: 50vh;
 
     & p, li {
-      
       padding: 15px;
       margin: 10px;
-      /*color: white;
-      -webkit-text-stroke: 0.5px black;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      box-shadow: 2px 2px 8px white;
-      background: linear-gradient(#0b3b52, #19b1ba) padding-box,
-              linear-gradient(to right, white, orange) border-box;
-      border-radius: 20px;
-      border: 3px solid transparent;*/
-
       background-color: #007dbc;
       color: white;
       font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       box-shadow: 2px 5px 10px white;
       border-radius: 5px;
       font-size: 2.5vh;
-
-      /*background-color: whitesmoke;
-      color: black;
-      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      font-size: 20px;
-      background: linear-gradient(white, gray) padding-box,
-              linear-gradient(to right, white, gray) border-box;
-      border-radius: 10px;
-      border: 3px solid transparent;*/
-
     }
 }
 
@@ -154,12 +134,6 @@ body {
   }
 
   .iceberg__element{
-    // transform: scale(100);
-    //display: grid;
-    // justify-items: center;
-    // align-items: center;
-    // left: 7vh;
-    // position: relative;
     height: 5vh;
     width: 5vw;
   }
@@ -187,13 +161,10 @@ body {
     top: 0;
   }
 
-  
-
   .scroll-section img{
     height: 45vh;
     margin: 0;
   }
-
 
   // scene 3
   .scroll-section__bottom1, .scroll-section__bottom2,   .scroll-section__bottom3{
