@@ -1,6 +1,5 @@
-@charset "UTF-8";
 :root {
-  --text-color: rgb(0, 0, 0);
+  --text-color: black;
   --background-color: white;
   overflow-x: hidden;
 }
@@ -14,12 +13,13 @@ body {
   transition: 3s background-color;
   color: var(--text-color);
   background-color: var(--background-color);
+  margin: 0;
 }
 
 .goal_14 {
   position: absolute;
-  width: 20vh;
-  padding-left: 0.2vw;
+  width: 10vh;
+  padding: 0.5vw;
 }
 
 .change-1 {
@@ -82,28 +82,77 @@ body {
   padding-top: 50vh;
 }
 .scroll-section__howtofix p, .scroll-section__howtofix li {
-  background-color: rgb(163, 192, 217);
-  color: black;
-  padding: 10px;
-  border-radius: 20px;
+  padding: 15px;
   margin: 10px;
+  background-color: #007dbc;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: 2px 5px 10px white;
+  border-radius: 5px;
+  font-size: 2.5vh;
 }
 
-/*
 @media (prefers-reduced-motion: reduce) {
-  Disable all animations
-  * {
+  Disable all animations * {
     animation: none !important;
     transition: none !important;
   }
 }
-*/
+@media only screen and (max-width: 300px) {
+  body {
+    margin: 0;
+  }
+  .goal_14 {
+    width: 14%;
+    height: 5%;
+  }
+  .water {
+    width: 100vw;
+    top: 134vw;
+  }
+  .cloud_1 {
+    height: 10vh;
+    width: 10vw;
+    animation: unset;
+    position: inherit;
+  }
+  .cloud_2, .cloud_3 {
+    height: 10vh;
+    width: 10vw;
+    display: none;
+  }
+  .iceberg__element {
+    height: 5vh;
+    width: 5vw;
+  }
+  .icebeicebear_elementar {
+    height: 5vh;
+    width: 5vw;
+  }
+  .scroll-section__howtofix {
+    width: 0;
+    margin: 0;
+    padding: 5px;
+  }
+  .scroll-section__howtofix p, .scroll-section__howtofix li {
+    margin: 0;
+    font-size: 12px;
+  }
+  .trash {
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  .scroll-section img {
+    height: 45vh;
+    margin: 0;
+  }
+  .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3 {
+    font-size: 1vh;
+  }
+}
 /* scene 1 
-------------------------------------------------
-THE BEGINNING:
-•	Polo bear – main character 
-•	Narrator – Give facts to viewers.
-•	Polo bear is on an iceberg, and it starts to slowly sink, while viewer is scrolling down.
+---------------------------
 */
 .scroll-section__quote {
   margin: 20vw;
@@ -111,91 +160,114 @@ THE BEGINNING:
 }
 
 /* scene 1 ------------------------------------------------*/
-/*.clouds{
-    position: absolute;
-}*/
+.clouds {
+  animation: cloud_animation 10s infinite alternate linear;
+}
 .clouds .cloud_1 {
   position: absolute;
-  margin-left: 100vh;
-  width: 50vh;
+  top: 15vh;
+  left: 100vh;
+  width: 20vw;
   z-index: -1;
+  animation: cloud_animation 8s infinite alternate linear;
 }
 .clouds .cloud_2 {
   position: absolute;
-  margin-left: 50vh;
-  width: 20vh;
+  left: 50vh;
+  width: 10vw;
   z-index: -1;
+  animation: cloud_animation 10s infinite alternate linear;
 }
 .clouds .cloud_3 {
   position: absolute;
-  margin-top: 25vh;
-  margin-left: 140vh;
-  width: 20vh;
+  top: 30vh;
+  left: 130vh;
+  width: 20vw;
   z-index: -2;
+  animation: cloud_animation 15s infinite alternate linear;
 }
 
-.water {
+@keyframes cloud_animation {
+  from {
+    left: 80%;
+  }
+  to {
+    left: 0;
+  }
+}
+.water__element {
   position: absolute;
-  width: 100%;
-  height: 70%;
-  left: 0%;
-  top: 63%;
+  width: 100vw;
+  height: 70vh;
+  top: 54vh;
+  margin: 0;
   background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
 }
 
-.iceberg {
-  margin-left: 20%;
+.iceberg__element, .icebear_element {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-top: 35vh;
 }
 
-.ice-platform {
+.iceplatform__element--modifier {
   position: absolute;
+  height: 127vh;
+  width: 127vw;
 }
 
-.ice-overlay {
+.iceoverlay__element--modifier {
   z-index: -1;
   position: absolute;
+  height: 127vh;
+  width: 127vw;
   animation: iceberg-animation 1s alternate infinite linear;
 }
 
-.ice-bottom {
+.icebottom__element--modifier {
   z-index: -2;
   position: absolute;
+  height: 127vh;
+  width: 127vw;
   animation: iceberg-animation 3s alternate infinite linear;
 }
 
-.icebear-body, .icebear-headBase, .icebear-legLeft, .icebear-legRight, .icebear-footLeft, .icebear-footRight, .icebear-tail, .icebear-ear, .icebear-face {
+.icebear-body__element--modifier, .icebear-headBase__element--modifier, .icebear-legLeft__element--modifier, .icebear-legRight__element--modifier, .icebear-footLeft__element--modifier, .icebear-footRight__element--modifier, .icebear-tail__element--modifier {
   position: fixed;
+  height: 127vh;
+  width: 127vw;
 }
 
-.head-move {
+.headmove__element--modifier {
   transform-origin: left;
   position: fixed;
-  width: 100vw;
-  height: 100vw;
+  height: 127vh;
+  width: 127vw;
   animation: head-animation 4s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
 
-.leftLeg-move {
+.leftLeg-move__element--modifier {
   transform-origin: top left;
   position: fixed;
-  width: 100vw;
-  height: 100vw;
+  height: 127vh;
+  width: 127vw;
   animation: leg-animation 4s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
 
-.rightLeg-move {
+.rightLeg-move__element--modifier {
   transform-origin: top center;
   position: fixed;
-  width: 100vw;
-  height: 100vw;
+  height: 127vh;
+  width: 127vw;
   animation: leg-animation 3s alternate infinite linear;
   animation-timing-function: ease-in-out;
 }
 
-.icebear {
-  position: absolute;
+.icebear_element {
+  margin-top: 1vh;
 }
 
 @keyframes iceberg-animation {
@@ -230,11 +302,11 @@ THE BEGINNING:
 }
 /* scene 2
 ------------------------------------------------
-MIDDLE
-•	Facts come up while It's sinking.
-•	Soon the iceberg is melted, the polo bear sinks down under water.
-•	We can also see plastic, toxic waste, dying see life, biohazard sign.
 */
+.scene2 {
+  overflow: hidden;
+}
+
 .scroll-section--scene2 {
   display: grid;
   margin-top: 160vh;
@@ -250,8 +322,8 @@ MIDDLE
   width: 40vw;
 }
 
-.small__fish, .cluster__fish {
-  animation: fish-animation-1 10s infinite;
+.small__fish, .cluster__fish, .small__fish__2 {
+  animation: fish-animation-1 7s infinite;
 }
 
 @keyframes fish-animation-1 {
@@ -318,70 +390,54 @@ MIDDLE
   margin-left: 10vw;
 }
 
-.scene2 {
-  overflow: hidden;
-}
-
-.scroll-section {
-  /*The whole scene*/
-}
+/* scene 2
+------------------------------------------------
+*/
 .scroll-section--scene3 {
   position: relative;
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(to top, rgb(239, 239, 239), rgba(239, 239, 239, 0));
+  margin: 0;
 }
 .scroll-section__howtofix {
+  position: absolute;
   font-size: 2.5vh;
   z-index: 1;
   width: 30vw;
   color: rgb(99, 99, 99);
-  position: absolute;
 }
-.scroll-section__img1 {
+.scroll-section__img1, .scroll-section__img2, .scroll-section__img3, .scroll-section__img4, .scroll-section__img6 {
   position: absolute;
-  z-index: 1;
+  bottom: 0;
   width: 10vw;
   height: 10vh;
-  bottom: 0;
+  z-index: 1000;
+}
+.scroll-section__img1 {
   left: 10vw;
 }
 .scroll-section__img2 {
-  position: absolute;
-  z-index: 1;
-  width: 10vw;
-  height: 10vh;
-  bottom: 15vh;
   left: 45vw;
 }
+.scroll-section__img3, .scroll-section__img4 {
+  padding-bottom: 8vh;
+}
 .scroll-section__img3 {
-  position: absolute;
-  z-index: 1;
-  width: 30vw;
-  height: 30vh;
-  bottom: 20vh;
   left: 5vw;
 }
 .scroll-section__img4 {
-  position: absolute;
-  z-index: 1;
-  width: 50vw;
-  height: 50vh;
-  bottom: 20vh;
-  left: 50vw;
+  left: 60vw;
 }
 .scroll-section__img5 {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 100vw;
+  z-index: 999;
 }
 .scroll-section__img6 {
-  position: absolute;
-  bottom: 0;
-  left: 80vw;
-  width: 10vw;
-  height: 10vh;
-  height: auto;
+  left: 60vw;
   transform: rotate(180deg);
 }
 .scroll-section__img7 {
@@ -389,24 +445,15 @@ MIDDLE
   bottom: 0;
   left: 80vw;
   width: 20vw;
-  height: 10vh;
   height: auto;
+  z-index: 999;
 }
-.scroll-section .fade-in {
+
+.fade-in {
   opacity: 1;
   transition: opacity 5s;
 }
-.scroll-section__images::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 150%);
-  z-index: 1000;
-}
+
 @keyframes moveParticles {
   0% {
     transform: translateY(0);
@@ -417,7 +464,7 @@ MIDDLE
     opacity: 0;
   }
 }
-.scroll-section .particle {
+.particle {
   position: absolute;
   bottom: 0;
   background: green;
@@ -427,27 +474,34 @@ MIDDLE
   margin-bottom: 40vh;
   border-radius: 50%;
 }
-.scroll-section .particle:nth-child(2n) {
+
+.particle:nth-child(2n) {
   animation-duration: 7s;
 }
-.scroll-section .particle:nth-child(3n) {
+
+.particle:nth-child(3n) {
   animation-duration: 7s;
 }
-.scroll-section .particle:nth-child(4n) {
+
+.particle:nth-child(4n) {
   animation-duration: 6s;
 }
-.scroll-section .particle:nth-child(5n) {
+
+.particle:nth-child(5n) {
   animation-duration: 7s;
 }
-.scroll-section .particle:nth-child(6n) {
+
+.particle:nth-child(6n) {
   animation-duration: 6s;
 }
-.scroll-section .particle:nth-child(7n) {
+
+.particle:nth-child(7n) {
   animation-duration: 4s;
 }
 
+/*The whole bottom scene properties*/
 .scroll-section {
-  /*The whole scene*/
+  /*Bottom info-text about what happens if we dont do something*/
 }
 .scroll-section--scene4 {
   position: relative;
@@ -456,13 +510,15 @@ MIDDLE
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-color: black;
-  z-index: 100;
+  background-image: linear-gradient(to top, rgb(32, 21, 21), rgb(19, 8, 8));
+  z-index: 1000;
 }
 .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
-  position: absolute; /* Add this */
-  font-size: 5vh;
+  color: white;
+  position: absolute;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
+  font-size: 3vh;
   animation: fadeInOut 40s infinite;
   width: 50vw;
   display: block;
