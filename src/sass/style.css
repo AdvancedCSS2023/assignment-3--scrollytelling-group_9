@@ -199,8 +199,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 70vh;
-  top: 54vh;
-  margin: 0;
+  top: 58vh;
   background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
 }
 
@@ -499,10 +498,6 @@ body {
   animation-duration: 4s;
 }
 
-/*The whole bottom scene properties*/
-.scroll-section {
-  /*Bottom info-text about what happens if we dont do something*/
-}
 .scroll-section--scene4 {
   position: relative;
   display: flex;

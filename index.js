@@ -57,3 +57,41 @@ const particles = document.querySelectorAll('.particle');
 particles.forEach((particle, index) => {
   particle.style.left = `${83.5 + Math.random() * 5}vw`;
 });
+
+// Function to detect if the device is mobile or not
+function isMobileDevice() {
+  return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
+// Event listener for window resize
+window.addEventListener('resize', function() {
+var landscapeMessage = document.getElementById('landscape-message');
+
+// only displays "switch tot landscape mode if its a mobile device"
+if (!isMobileDevice()) {
+  landscapeMessage.style.display = 'none';
+  return;
+}
+
+if (window.innerHeight > window.innerWidth) {
+  landscapeMessage.style.display = 'block';
+} else {
+  landscapeMessage.style.display = 'none';
+}
+}, false);
+
+// Check if its a mobile device
+if (isMobileDevice() && window.innerHeight > window.innerWidth) {
+document.getElementById('landscape-message').style.display = 'block';
+}
+
+// Button to hide the message
+document.getElementById('ok-button').addEventListener('click', function() {
+document.getElementById('landscape-message').style.display = 'none';
+});
+
+//if its a pc remove the whole message, I had to ad this because it sometimes loaded in by defaultt
+// on pc
+if (!isMobileDevice()) {
+  document.getElementById('landscape-message').style.display = 'none';
+}
