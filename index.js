@@ -89,3 +89,7 @@ document.getElementById('landscape-message').style.display = 'block';
 document.getElementById('ok-button').addEventListener('click', function() {
 document.getElementById('landscape-message').style.display = 'none';
 });
+
+if (!isMobileDevice()) {
+  document.getElementById('landscape-message').style.display = 'none';
+}
