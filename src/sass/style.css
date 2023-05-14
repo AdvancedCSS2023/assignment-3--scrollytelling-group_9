@@ -451,7 +451,7 @@ body {
   left: 45vw;
 }
 .scroll-section__img3, .scroll-section__img4 {
-  padding-bottom: 10vh;
+  padding-bottom: 8vh;
 }
 .scroll-section__img3 {
   left: 5vw;
@@ -529,9 +529,6 @@ body {
   animation-duration: 4s;
 }
 
-.scroll-section {
-  /*The whole scene*/
-}
 .scroll-section--scene4 {
   position: relative;
   display: flex;
@@ -543,10 +540,10 @@ body {
   z-index: 1000;
 }
 .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
-  position: absolute; /* Add this */
-  font-size: 5vh;
+  position: absolute;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
+  font-size: 3vh;
   animation: fadeInOut 40s infinite;
   width: 50vw;
   display: block;
