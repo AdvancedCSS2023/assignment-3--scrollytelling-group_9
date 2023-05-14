@@ -529,6 +529,10 @@ body {
   animation-duration: 4s;
 }
 
+/*The whole bottom scene properties*/
+.scroll-section {
+  /*Bottom info-text about what happens if we dont do something*/
+}
 .scroll-section--scene4 {
   position: relative;
   display: flex;
@@ -540,6 +544,7 @@ body {
   z-index: 1000;
 }
 .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
+  color: white;
   position: absolute;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;

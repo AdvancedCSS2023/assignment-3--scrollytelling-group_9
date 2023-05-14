@@ -1,4 +1,4 @@
-
+// Intersection Observer for background color change
 const callback = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -8,40 +8,34 @@ const callback = (entries, observer) => {
 };
 
 const changes = document.querySelectorAll('.change');
-const fish = document.querySelectorAll('.fish');
-
-const observer = new IntersectionObserver(callback, { threshold: .9 });
+const colorObserver = new IntersectionObserver(callback, { threshold: .9 });
 
 changes.forEach(change => {
-  observer.observe(change);
+  colorObserver.observe(change);
 });
 
+// Scroll event handling for .scroll-section__howtofix elements
 const howToFixElems = document.querySelectorAll('.scroll-section__howtofix');
 const totalSections = howToFixElems.length;
 
-document.addEventListener("DOMContentLoaded", function() {
-  let fading = false;
+window.addEventListener("scroll", function() {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollPercentage = (scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
+  
+  let activeIndex = Math.floor(scrollPercentage / (100 / totalSections));
 
-  window.addEventListener("scroll", function() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollPercentage = (scrollTop / (document.documentElement.scrollHeight - document.documentElement.clientHeight)) * 100;
-    
-    let activeIndex = Math.floor(scrollPercentage / (100 / totalSections));
-
-    howToFixElems.forEach((elem, index) => {
-      if (index === activeIndex) {
-        elem.classList.remove("fade-out");
-        elem.style.transform = `translateY(${scrollTop}px)`;
-        fading = false;
-      } else {
-        elem.classList.add("fade-out");
-        elem.style.transform = '';
-        fading = true;
-      }
-    });
+  howToFixElems.forEach((elem, index) => {
+    if (index === activeIndex) {
+      elem.classList.remove("fade-out");
+      elem.style.transform = `translateY(${scrollTop}px)`;
+    } else {
+      elem.classList.add("fade-out");
+      elem.style.transform = '';
+    }
   });
 });
 
+// Intersection Observer for fade-in of .scroll-section__bottom
 document.addEventListener("DOMContentLoaded", function() {
   const bottomText = document.querySelector('.scroll-section__bottom');
 
@@ -57,13 +51,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const fadeInObserver = new IntersectionObserver(fadeInCallback, { threshold: 0.1 });
   fadeInObserver.observe(bottomText);
 });
-
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.documentElement.setAttribute('data-theme', 'dark');
-} else {
-  document.documentElement.setAttribute('data-theme', 'light');
-}
-
+// to create particles for the toxic barrel on random areas within 5ww size.
 const particles = document.querySelectorAll('.particle');
 
 particles.forEach((particle, index) => {
