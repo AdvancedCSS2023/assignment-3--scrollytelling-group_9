@@ -1,4 +1,94 @@
 /* scene 2
 ------------------------------------------------
 */
+.scene2 {
+    overflow: hidden;
+}
+
+.scroll-section--scene2 {
+    display: grid;
+    margin-top: 160vh;
+}
+
+.scroll-section__globalwarmingfacts {
+    margin: 2vh;
+    width: 40vw;
+}
+
+.scroll-section__globalwarmingfacts2 {
+    margin: 2vh;
+    width: 40vw;
+}
+
+.small__fish, .cluster__fish, .small__fish__2{
+    animation: fish-animation-1 7s infinite;
+}
+
+@keyframes fish-animation-1 {
+    from {
+        transform: translateX(130vw);
+    }
+    to {
+        transform: translateX(-170vw);
+    }
+}
+.big__fish, .small__amount__fish {
+    animation: fish-animation-2 10s infinite;
+}
+
+.big__fish{
+    margin-top: 230vh;
+}
+
+@keyframes fish-animation-2 {
+    from {
+        transform: translateX(-110vw);
+    }
+    to {
+        transform: translateX(130vw);
+    }
+}
+
+.trash {
+    animation: trash-animation 7s ease-in infinite;
+}
+
+.trash__bag{
+    margin-bottom: 200vh;
+    margin-left: 120vh;
+    // position: relative;
+}
+
+.trash__can{
+    margin-left: 100vh;
+    margin-bottom: 260vh;
+    position: relative;
+}
+
+.trash__spoon{
+    margin-left: 50vh;
+}
+
+@keyframes trash-animation {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(5.56vh);
+    }
+    50% {
+        transform: translateY(11.11vh);
+    }
+    70% {
+        transform: translateY(5.56vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.trash__sock {
+    margin-left: 10vw;
+
+}
 

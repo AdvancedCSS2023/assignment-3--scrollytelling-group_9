@@ -1,4 +1,53 @@
-/* scene 4 
-------------------------------------------------
-*/
+/*The whole bottom scene properties*/
+.scroll-section {
+  &--scene4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(32, 21, 21, 100), rgb(19, 8, 8));
+    z-index: 1000;
+  }
 
+  /*Bottom info-text about what happens if we dont do something*/
+  &__bottom1, &__bottom2, &__bottom3, &__bottom4 {
+    color: white;
+    position: absolute; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 3vh;
+    animation: fadeInOut 40s infinite;
+    width: 50vw;
+    display: block;
+    animation-timing-function: ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  &__bottom1 {
+    animation-delay: 0s;
+  }
+  
+  &__bottom2 {
+    animation-delay: 10s;
+  }
+  
+  &__bottom3 {
+    animation-delay: 20s;
+  }
+  
+  &__bottom4 {
+    animation-delay: 30s;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 16.66% { opacity: 0; visibility: hidden; }
+    16.67%, 20% { opacity: 0; visibility: visible; transform: scale(1.0); } // Fade in starts
+    25%, 33.33% { opacity: 1; visibility: visible; transform: scale(1.1);} // Fully visible
+    33.34%, 37.5% { opacity: 1; visibility: visible;} // Fade out starts
+    41.67%, 50% { opacity: 0; visibility: visible; } // Fully transparent
+    50.01%, 100% { visibility: hidden; }
+  }
+}

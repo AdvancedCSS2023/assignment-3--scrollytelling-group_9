@@ -1,3 +1,161 @@
 /* scene 1 
-------------------------------------------------
+---------------------------
 */
+
+.scroll-section {
+    &--scene1 {
+    }
+
+    &__quote {
+        margin: 20vw;
+        width: 40vw;
+    }
+}
+/* scene 1 ------------------------------------------------*/
+
+.clouds{
+    animation: cloud_animation 10s infinite alternate linear;
+    .cloud_1{
+        position: absolute;
+        top: 15vh;
+        left: 100vh;
+        width: 20vw;
+        z-index: -1;
+        animation: cloud_animation 8s infinite alternate linear;
+    }
+
+    .cloud_2{
+        position: absolute;
+        left: 50vh;
+        width: 10vw;
+        z-index: -1;
+        animation: cloud_animation 10s infinite alternate linear;
+    }
+
+    .cloud_3{
+        position: absolute;
+        top: 30vh;
+        left: 130vh;
+        width: 20vw;
+        z-index: -2;
+        animation: cloud_animation 15s infinite alternate linear;
+    }
+}
+
+@keyframes cloud_animation{
+    from {
+    left: 80%;
+    }
+    
+    to {
+    left: 0;
+    }
+}
+
+.water__element{
+    position: absolute;
+    width: 100vw;
+    height: 70vh;
+    top: 54vh;
+    margin: 0;
+    background: linear-gradient(to top, rgba(169,208,113,0),rgba(21,119,143,1)); 
+}
+
+.iceberg__element, .icebear_element {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: 35vh;
+}
+
+.iceplatform__element--modifier {
+    position: absolute;
+    height: 127vh;
+    width: 127vw;
+}
+
+.iceoverlay__element--modifier {
+    z-index: -1;
+    position: absolute;
+    height: 127vh;
+    width: 127vw;
+    animation: iceberg-animation 1s alternate infinite linear;
+}
+
+.icebottom__element--modifier {
+    z-index: -2;
+    position: absolute;
+    height: 127vh;
+    width: 127vw;
+    animation: iceberg-animation 3s alternate infinite linear;
+}
+
+.icebear-body__element--modifier, .icebear-headBase__element--modifier, .icebear-legLeft__element--modifier, .icebear-legRight__element--modifier, .icebear-footLeft__element--modifier, .icebear-footRight__element--modifier, .icebear-tail__element--modifier{
+    position: fixed;
+    height: 127vh;
+    width: 127vw;
+}
+
+.headmove__element--modifier{
+    transform-origin: left;
+    position: fixed;
+    height: 127vh;
+    width: 127vw;
+    animation: head-animation 4s alternate infinite linear;
+    animation-timing-function: ease-in-out;
+}
+
+.leftLeg-move__element--modifier{
+    transform-origin: top left;
+    position: fixed;
+    height: 127vh;
+    width: 127vw;
+    animation: leg-animation 4s alternate infinite linear;
+    animation-timing-function: ease-in-out;
+}
+
+.rightLeg-move__element--modifier{
+    transform-origin: top center;
+    position: fixed;
+    height: 127vh;
+    width: 127vw;
+    animation: leg-animation 3s alternate infinite linear;
+    animation-timing-function: ease-in-out;
+}
+
+.icebear_element{
+    margin-top: 1vh;
+}
+
+@keyframes iceberg-animation {
+    0% {
+    transform: rotate(2deg);
+    }
+    100% {
+    transform: rotate(-2deg);
+    }
+}
+
+@keyframes head-animation {
+    0% {
+    transform: rotate(0.5deg);
+    }
+    50% {
+    transform: rotate(-0.5deg);
+    }
+    100% {
+    transform: rotate(-1deg);
+    }
+}
+
+@keyframes leg-animation {
+    0% {
+    transform: rotate(0.5deg);
+    }
+    50% {
+    transform: rotate(-0.2deg);
+    }
+    100% {
+        transform: rotate(1deg);
+    }
+}

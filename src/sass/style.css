@@ -1,58 +1,562 @@
+:root {
+  --text-color: black;
+  --background-color: white;
+  overflow-x: hidden;
+}
+
+[data-theme=dark] {
+  --text-color: white;
+  --background-color: black;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  transition: 3s background-color;
+  color: var(--text-color);
+  background-color: var(--background-color);
   margin: 0;
-  padding: 0;
 }
 
-.scroll-section {
+.goal_14 {
+  position: absolute;
+  width: 10vh;
+  padding: 0.5vw;
+}
+
+.change-1 {
+  position: absolute;
+  width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
 }
 
-.scroll-section__content {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+.change-2 {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 100vh;
 }
 
-.scroll-section__content--visible {
+.change-3 {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 200vh;
+}
+
+.change-4 {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 300vh;
+}
+
+.change-5 {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 400vh;
+}
+
+.scroll-section--scene1 {
+  display: grid;
+}
+
+.scroll-section__quote {
+  width: 40vw;
+}
+
+* {
+  overflow-x: hidden;
+}
+
+.fade-in {
   opacity: 1;
-  transform: translateY(0);
+  transition: opacity 1s;
 }
 
-.scroll-section__polar-bear {
+.fade-out {
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+  transition: opacity 1s;
 }
 
-.scroll-section__polar-bear--visible {
-  opacity: 1;
-  transform: translateY(0);
-  animation: polarBearAnimation 3s infinite alternate;
+.scroll-section__howtofix {
+  padding-top: 50vh;
+}
+.scroll-section__howtofix p, .scroll-section__howtofix li {
+  padding: 15px;
+  margin: 10px;
+  background-color: #007dbc;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  box-shadow: 2px 5px 10px white;
+  border-radius: 5px;
+  font-size: 2.5vh;
 }
 
-@keyframes polarBearAnimation {
-  0% {
-    transform: translateY(0) scale(1);
+@media (prefers-reduced-motion: reduce) {
+  Disable all animations * {
+    animation: none !important;
+    transition: none !important;
   }
-  100% {
-    transform: translateY(-10px) scale(1.1);
+}
+@media only screen and (max-width: 300px) {
+  body {
+    margin: 0;
+  }
+  .goal_14 {
+    width: 14%;
+    height: 5%;
+  }
+  .water {
+    width: 100vw;
+    top: 134vw;
+  }
+  .cloud_1 {
+    height: 10vh;
+    width: 10vw;
+    animation: unset;
+    position: inherit;
+  }
+  .cloud_2, .cloud_3 {
+    height: 10vh;
+    width: 10vw;
+    display: none;
+  }
+  .iceberg__element {
+    height: 5vh;
+    width: 5vw;
+  }
+  .icebeicebear_elementar {
+    height: 5vh;
+    width: 5vw;
+  }
+  .scroll-section__howtofix {
+    width: 0;
+    margin: 0;
+    padding: 5px;
+  }
+  .scroll-section__howtofix p, .scroll-section__howtofix li {
+    margin: 0;
+    font-size: 12px;
+  }
+  .trash {
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
+  .scroll-section img {
+    height: 45vh;
+    margin: 0;
+  }
+  .scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3 {
+    font-size: 1vh;
   }
 }
 /* scene 1 
-------------------------------------------------
+---------------------------
 */
+.scroll-section__quote {
+  margin: 20vw;
+  width: 40vw;
+}
+
+/* scene 1 ------------------------------------------------*/
+.clouds {
+  animation: cloud_animation 10s infinite alternate linear;
+}
+.clouds .cloud_1 {
+  position: absolute;
+  top: 15vh;
+  left: 100vh;
+  width: 20vw;
+  z-index: -1;
+  animation: cloud_animation 8s infinite alternate linear;
+}
+.clouds .cloud_2 {
+  position: absolute;
+  left: 50vh;
+  width: 10vw;
+  z-index: -1;
+  animation: cloud_animation 10s infinite alternate linear;
+}
+.clouds .cloud_3 {
+  position: absolute;
+  top: 30vh;
+  left: 130vh;
+  width: 20vw;
+  z-index: -2;
+  animation: cloud_animation 15s infinite alternate linear;
+}
+
+@keyframes cloud_animation {
+  from {
+    left: 80%;
+  }
+  to {
+    left: 0;
+  }
+}
+.water__element {
+  position: absolute;
+  width: 100vw;
+  height: 70vh;
+  top: 58vh;
+  background: linear-gradient(to top, rgba(169, 208, 113, 0), rgb(21, 119, 143));
+}
+
+.iceberg__element, .icebear_element {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin-top: 35vh;
+}
+
+.iceplatform__element--modifier {
+  position: absolute;
+  height: 127vh;
+  width: 127vw;
+}
+
+.iceoverlay__element--modifier {
+  z-index: -1;
+  position: absolute;
+  height: 127vh;
+  width: 127vw;
+  animation: iceberg-animation 1s alternate infinite linear;
+}
+
+.icebottom__element--modifier {
+  z-index: -2;
+  position: absolute;
+  height: 127vh;
+  width: 127vw;
+  animation: iceberg-animation 3s alternate infinite linear;
+}
+
+.icebear-body__element--modifier, .icebear-headBase__element--modifier, .icebear-legLeft__element--modifier, .icebear-legRight__element--modifier, .icebear-footLeft__element--modifier, .icebear-footRight__element--modifier, .icebear-tail__element--modifier {
+  position: fixed;
+  height: 127vh;
+  width: 127vw;
+}
+
+.headmove__element--modifier {
+  transform-origin: left;
+  position: fixed;
+  height: 127vh;
+  width: 127vw;
+  animation: head-animation 4s alternate infinite linear;
+  animation-timing-function: ease-in-out;
+}
+
+.leftLeg-move__element--modifier {
+  transform-origin: top left;
+  position: fixed;
+  height: 127vh;
+  width: 127vw;
+  animation: leg-animation 4s alternate infinite linear;
+  animation-timing-function: ease-in-out;
+}
+
+.rightLeg-move__element--modifier {
+  transform-origin: top center;
+  position: fixed;
+  height: 127vh;
+  width: 127vw;
+  animation: leg-animation 3s alternate infinite linear;
+  animation-timing-function: ease-in-out;
+}
+
+.icebear_element {
+  margin-top: 1vh;
+}
+
+@keyframes iceberg-animation {
+  0% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
+}
+@keyframes head-animation {
+  0% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(-1deg);
+  }
+}
+@keyframes leg-animation {
+  0% {
+    transform: rotate(0.5deg);
+  }
+  50% {
+    transform: rotate(-0.2deg);
+  }
+  100% {
+    transform: rotate(1deg);
+  }
+}
 /* scene 2
 ------------------------------------------------
 */
-/* scene 3
+.scene2 {
+  overflow: hidden;
+}
+
+.scroll-section--scene2 {
+  display: grid;
+  margin-top: 160vh;
+}
+
+.scroll-section__globalwarmingfacts {
+  margin: 2vh;
+  width: 40vw;
+}
+
+.scroll-section__globalwarmingfacts2 {
+  margin: 2vh;
+  width: 40vw;
+}
+
+.small__fish, .cluster__fish, .small__fish__2 {
+  animation: fish-animation-1 7s infinite;
+}
+
+@keyframes fish-animation-1 {
+  from {
+    transform: translateX(130vw);
+  }
+  to {
+    transform: translateX(-170vw);
+  }
+}
+.big__fish, .small__amount__fish {
+  animation: fish-animation-2 10s infinite;
+}
+
+.big__fish {
+  margin-top: 230vh;
+}
+
+@keyframes fish-animation-2 {
+  from {
+    transform: translateX(-110vw);
+  }
+  to {
+    transform: translateX(130vw);
+  }
+}
+.trash {
+  animation: trash-animation 7s ease-in infinite;
+}
+
+.trash__bag {
+  margin-bottom: 200vh;
+  margin-left: 120vh;
+}
+
+.trash__can {
+  margin-left: 100vh;
+  margin-bottom: 260vh;
+  position: relative;
+}
+
+.trash__spoon {
+  margin-left: 50vh;
+}
+
+@keyframes trash-animation {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(5.56vh);
+  }
+  50% {
+    transform: translateY(11.11vh);
+  }
+  70% {
+    transform: translateY(5.56vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.trash__sock {
+  margin-left: 10vw;
+}
+
+/* scene 2
 ------------------------------------------------
 */
-/* scene 4 
-------------------------------------------------
-*//*# sourceMappingURL=style.css.map */
+.scroll-section--scene3 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to top, rgb(239, 239, 239), rgba(239, 239, 239, 0));
+  margin: 0;
+}
+.scroll-section__howtofix {
+  position: absolute;
+  font-size: 2.5vh;
+  z-index: 1;
+  width: 30vw;
+  color: rgb(99, 99, 99);
+}
+.scroll-section__img1, .scroll-section__img2, .scroll-section__img3, .scroll-section__img4, .scroll-section__img6 {
+  position: absolute;
+  bottom: 0;
+  width: 10vw;
+  height: 10vh;
+  z-index: 1000;
+}
+.scroll-section__img1 {
+  left: 10vw;
+}
+.scroll-section__img2 {
+  left: 45vw;
+}
+.scroll-section__img3, .scroll-section__img4 {
+  padding-bottom: 8vh;
+}
+.scroll-section__img3 {
+  left: 5vw;
+}
+.scroll-section__img4 {
+  left: 60vw;
+}
+.scroll-section__img5 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 999;
+}
+.scroll-section__img6 {
+  left: 60vw;
+  transform: rotate(180deg);
+}
+.scroll-section__img7 {
+  position: absolute;
+  bottom: 0;
+  left: 80vw;
+  width: 20vw;
+  height: auto;
+  z-index: 999;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 5s;
+}
+
+@keyframes moveParticles {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+.particle {
+  position: absolute;
+  bottom: 0;
+  background: green;
+  width: 25px;
+  height: 25px;
+  animation: moveParticles 2s linear infinite;
+  margin-bottom: 40vh;
+  border-radius: 50%;
+}
+
+.particle:nth-child(2n) {
+  animation-duration: 7s;
+}
+
+.particle:nth-child(3n) {
+  animation-duration: 7s;
+}
+
+.particle:nth-child(4n) {
+  animation-duration: 6s;
+}
+
+.particle:nth-child(5n) {
+  animation-duration: 7s;
+}
+
+.particle:nth-child(6n) {
+  animation-duration: 6s;
+}
+
+.particle:nth-child(7n) {
+  animation-duration: 4s;
+}
+
+.scroll-section--scene4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to top, rgb(32, 21, 21), rgb(19, 8, 8));
+  z-index: 1000;
+}
+.scroll-section__bottom1, .scroll-section__bottom2, .scroll-section__bottom3, .scroll-section__bottom4 {
+  color: white;
+  position: absolute;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-align: center;
+  font-size: 3vh;
+  animation: fadeInOut 40s infinite;
+  width: 50vw;
+  display: block;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.scroll-section__bottom1 {
+  animation-delay: 0s;
+}
+.scroll-section__bottom2 {
+  animation-delay: 10s;
+}
+.scroll-section__bottom3 {
+  animation-delay: 20s;
+}
+.scroll-section__bottom4 {
+  animation-delay: 30s;
+}
+@keyframes fadeInOut {
+  0%, 16.66% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  16.67%, 20% {
+    opacity: 0;
+    visibility: visible;
+    transform: scale(1);
+  }
+  25%, 33.33% {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.1);
+  }
+  33.34%, 37.5% {
+    opacity: 1;
+    visibility: visible;
+  }
+  41.67%, 50% {
+    opacity: 0;
+    visibility: visible;
+  }
+  50.01%, 100% {
+    visibility: hidden;
+  }
+}/*# sourceMappingURL=style.css.map */
